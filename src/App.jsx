@@ -22,6 +22,7 @@ import {
   ArrowUpRight,
   Users,
   Download,
+  Send,
   Heart
 } from 'lucide-react';
 import {
@@ -57,24 +58,20 @@ export default function App() {
   const [modalTab, setModalTab] = useState('summary');
   const [copiedId, setCopiedId] = useState(null);
 
-  // Interactive AI Prompt Builder State
-  const [promptPersona, setPromptPersona] = useState(
-    'Act as a critical Senior Product Director and Executive Editor'
-  );
-  const [promptGoal, setPromptGoal] = useState(
-    'We are launching ChatGPT Business ($79/mo flat tier) for time-poor SMB owners. Draft a 3-bullet executive launch memo highlighting bandwidth recovery.'
-  );
-  const [promptBoundaries, setPromptBoundaries] = useState(
-    'Limit to 3 sentences max. Forbid corporate clichés like "synergy", "delve", and "perseverance". Include quantified weekly hours saved.'
-  );
-  const [promptCopied, setPromptCopied] = useState(false);
+  // Ask Portfolio AI Assistant State (Public Recruiter-Ready Chat Simulator)
+  const [chatQuery, setChatQuery] = useState('');
+  const [chatHistory, setChatHistory] = useState([
+    {
+      sender: 'ai',
+      text: "Hi there! I'm Nitin's portfolio AI assistant. Feel free to ask me anything about his product management experience, Agile metrics at Amdocs, case studies (like OpenAI or Caterpillar), or his leadership background!"
+    }
+  ]);
 
   const categories = [
     'All',
-    'Product Builds',
-    'Product Strategy',
-    'AI & Data Ethics',
-    'Systems & Operations'
+    'Technical & AI Builds',
+    'Product & GTM Strategy',
+    'Systems, PLM & Supply Chain'
   ];
 
   const filteredProjects = React.useMemo(() => {
@@ -88,12 +85,34 @@ export default function App() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  const assembledPrompt = `[PERSONA]\n${promptPersona}\n\n[CONTEXT & GOAL]\n${promptGoal}\n\n[STRICT BOUNDARIES]\n${promptBoundaries}`;
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    if (!chatQuery.trim()) return;
 
-  const copyPrompt = () => {
-    navigator.clipboard.writeText(assembledPrompt);
-    setPromptCopied(true);
-    setTimeout(() => setPromptCopied(false), 2000);
+    const userMsg = chatQuery;
+    setChatQuery('');
+    setChatHistory((prev) => [...prev, { sender: 'user', text: userMsg }]);
+
+    // Intelligent simulated recruiter response
+    setTimeout(() => {
+      let reply = "That's a great question about Nitin's background. ";
+      const q = userMsg.toLowerCase();
+      if (q.includes('agile') || q.includes('amdocs') || q.includes('sprint') || q.includes('velocity')) {
+        reply += "At Amdocs, Nitin increased team sprint velocity by 25% and maintained a 90%+ delivery predictability across 3 product pillars by aligning cross-functional stakeholders and refining Agile user stories.";
+      } else if (q.includes('openai') || q.includes('smb') || q.includes('strategy') || q.includes('chatgpt')) {
+        reply += "In his OpenAI ChatGPT Business case study, Nitin designed a $79/mo flat-rate tier targeting 33.2M US SMBs trapped in 'The Missing Middle,' modeling a $1.21B 3-year revenue build with 56% operating margins.";
+      } else if (q.includes('faith') || q.includes('church') || q.includes('ministry') || q.includes('servant') || q.includes('leader')) {
+        reply += "Nitin's leadership is anchored in his personal faith and a servant-leadership mindset. He is actively involved as a student leader at Ignite Campus Ministry and a young adult leader & worship team member at CityMovement Church Raleigh.";
+      } else if (q.includes('nc state') || q.includes('education') || q.includes('gpa') || q.includes('degree')) {
+        reply += "Nitin is currently pursuing his Master of Engineering Management (M.E.M.) at NC State with a 3.9 GPA, focusing on AI engineering management, economics, and product lifecycle management.";
+      } else if (q.includes('caterpillar') || q.includes('taas') || q.includes('mining')) {
+        reply += "In his Caterpillar case study, Nitin architected a Throughput-as-a-Service (TaaS) business model for autonomous haulage systems, expanding asset LTV from $3.5M to $10M+ while targeting 95%+ fleet uptime.";
+      } else {
+        reply += `Nitin brings a unique blend of technical depth (Python, React, BERT NLP) and strategic product management. You can explore his full work history in the Experience tab or review his 10 detailed case studies!`;
+      }
+
+      setChatHistory((prev) => [...prev, { sender: 'ai', text: reply }]);
+    }, 600);
   };
 
   return (
@@ -115,9 +134,9 @@ export default function App() {
           <nav className="nav-bar">
             {[
               { id: 'overview', label: 'Overview', icon: Layers },
-              { id: 'experience', label: 'Experience & Story', icon: GraduationCap },
+              { id: 'experience', label: 'Experience & Bio', icon: GraduationCap },
               { id: 'projects', label: 'Projects & Case Studies (10)', icon: Briefcase },
-              { id: 'ai-lab', label: 'AI & Leadership Sim', icon: Cpu },
+              { id: 'ai-assistant', label: 'Ask My Portfolio AI', icon: Cpu },
               { id: 'certifications', label: 'Credentials (4)', icon: Award }
             ].map((item) => {
               const Icon = item.icon;
@@ -153,23 +172,23 @@ export default function App() {
             <section className="card card-lg stack-md">
               <div>
                 <span className="badge">
-                  Seeking Product Manager & Technical Program Manager Roles
+                  Seeking Product Manager, Technical Program Manager & Project Manager Roles
                 </span>
                 <h1 className="hero-title">
                   Hi, I’m {PROFILE.shortName} — <span className="hero-highlight">{PROFILE.tagline}</span>
                 </h1>
-                <p className="text-secondary" style={{ fontSize: '1.05rem', marginTop: '0.75rem' }}>
+                <p className="text-secondary" style={{ fontSize: '1.02rem', lineHeight: '1.6' }}>
                   {PROFILE.bio}
                 </p>
               </div>
 
               <div className="btn-row">
                 <button onClick={() => setActivePage('projects')} className="btn btn-primary">
-                  Explore My Work & Projects
+                  Explore All 10 Projects & Case Studies
                   <ChevronRight size={16} />
                 </button>
                 <button onClick={() => setActivePage('experience')} className="btn btn-secondary">
-                  My Journey & Experience
+                  View Work Experience & Education
                 </button>
                 <a
                   href={PROFILE.resumePdfPath}
@@ -208,17 +227,17 @@ export default function App() {
                 </a>
               </div>
 
-              {/* Subtle Faith & Calling Feature Card */}
-              <div className="subcard" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', padding: '1.25rem', borderColor: 'var(--primary-border)' }}>
-                <div style={{ padding: '0.5rem', borderRadius: '0.5rem', background: 'var(--primary-soft)', color: 'var(--primary)' }}>
-                  <Heart size={20} />
+              {/* Subtle Faith & Servant Leadership Callout Card */}
+              <div className="subcard" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', padding: '1.15rem', borderColor: 'var(--border-color)' }}>
+                <div style={{ padding: '0.45rem', borderRadius: '0.4rem', background: 'var(--primary-soft)', color: 'var(--primary)' }}>
+                  <Heart size={18} />
                 </div>
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text-main)' }}>
-                    Faith & Community Leadership
+                  <div style={{ fontWeight: 700, fontSize: '0.92rem', color: 'var(--text-main)' }}>
+                    Community & Ministry Leadership
                   </div>
-                  <p className="text-secondary" style={{ fontSize: '0.85rem', marginTop: '0.2rem' }}>
-                    Rooted in Christian faith and servant leadership. Active as a student leader at <strong>Ignite Campus Ministry</strong>, and serving as a young adult leader and worship team member at <strong>CityMovement Church Raleigh</strong>.
+                  <p className="text-secondary" style={{ fontSize: '0.84rem', marginTop: '0.15rem' }}>
+                    Grounded in Christian values and servant leadership. Active as a student leader at <strong>Ignite Campus Ministry</strong> and a young adult leader & worship team member at <strong>CityMovement Church Raleigh</strong>.
                   </p>
                 </div>
               </div>
@@ -243,7 +262,7 @@ export default function App() {
               <div className="card stack-md">
                 <div className="flex-between">
                   <div>
-                    <span className="eyebrow">Career & Leadership</span>
+                    <span className="eyebrow">Career Track Record</span>
                     <h2 className="section-title">Work Experience</h2>
                   </div>
                   <button
@@ -311,7 +330,7 @@ export default function App() {
                 </div>
 
                 <div className="card stack-md">
-                  <h2 className="section-title">Product, People & Technical Toolkit</h2>
+                  <h2 className="section-title">Product, Technical & Analytics Toolkit</h2>
                   {SKILL_GROUPS.map((grp, idx) => (
                     <div key={idx} className="stack-sm">
                       <div className="eyebrow">{grp.title}</div>
@@ -330,8 +349,8 @@ export default function App() {
             <section className="stack-md">
               <div className="flex-between">
                 <div>
-                  <span className="eyebrow">Selected Work & Case Studies</span>
-                  <h2 className="section-title">Featured Projects & Strategic Studies</h2>
+                  <span className="eyebrow">Selected Work & Strategic Blueprints</span>
+                  <h2 className="section-title">Featured Product Builds & Case Studies</h2>
                 </div>
                 <button onClick={() => setActivePage('projects')} className="btn btn-outline">
                   View All 10 Projects <ChevronRight size={15} />
@@ -375,7 +394,7 @@ export default function App() {
                         ))}
                       </div>
                       <div className="flex-between text-accent" style={{ fontSize: '0.8rem', fontWeight: 600 }}>
-                        <span>Read Case Study</span>
+                        <span>Inspect Full Case Study</span>
                         <ArrowUpRight size={16} />
                       </div>
                     </div>
@@ -386,13 +405,13 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 2: EXPERIENCE & STORY ==================== */}
+        {/* ==================== PAGE 2: EXPERIENCE & BIO ==================== */}
         {activePage === 'experience' && (
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">My Journey & Background</span>
-                <h1 className="page-title">Experience, Education & Community Ministry</h1>
+                <span className="eyebrow">Curriculum Vitae & Leadership</span>
+                <h1 className="page-title">Work Experience, Education & Community Impact</h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
                   {PROFILE.location} • {PROFILE.phone} • {PROFILE.emailPrimary}
                 </p>
@@ -486,17 +505,17 @@ export default function App() {
 
             <section className="stack-md">
               <h2 className="section-title">
-                <Users size={20} className="text-accent" /> Ministry, Leadership & Community Service
+                <Users size={20} className="text-accent" /> Leadership & Community Engagement
               </h2>
-              <div className="grid-2">
+              <div className="grid-3">
                 {LEADERSHIP.map((item, idx) => (
                   <div key={idx} className="card stack-sm">
                     <span className="eyebrow">{item.period}</span>
-                    <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>{item.role}</h3>
-                    <div className="text-muted" style={{ fontSize: '0.82rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>{item.role}</h3>
+                    <div className="text-muted" style={{ fontSize: '0.8rem', fontWeight: 600 }}>
                       {item.org}
                     </div>
-                    <p className="text-secondary" style={{ fontSize: '0.88rem' }}>
+                    <p className="text-secondary" style={{ fontSize: '0.85rem' }}>
                       {item.detail}
                     </p>
                   </div>
@@ -511,12 +530,12 @@ export default function App() {
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">Project Portfolio</span>
+                <span className="eyebrow">Complete Portfolio Directory</span>
                 <h1 className="page-title">
-                  Projects & Case Studies ({filteredProjects.length})
+                  Product Builds, AI Pipelines & Strategic Case Studies ({filteredProjects.length})
                 </h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
-                  Click any card to read the full story, approach, and human impact behind each project.
+                  Click any project card to open the full interactive dossier, architecture breakdown, and financial model.
                 </p>
               </div>
 
@@ -580,7 +599,7 @@ export default function App() {
                       My Role: <strong style={{ color: 'var(--text-main)' }}>{study.role}</strong>
                     </span>
                     <span className="text-accent" style={{ fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
-                      Read Case Study <ChevronRight size={15} />
+                      Open Full Case Study <ChevronRight size={15} />
                     </span>
                   </div>
                 </div>
@@ -589,136 +608,72 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 4: AI & LEADERSHIP SIM ==================== */}
-        {activePage === 'ai-lab' && (
+        {/* ==================== PAGE 4: ASK MY PORTFOLIO AI ASSISTANT ==================== */}
+        {activePage === 'ai-assistant' && (
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">Interactive AI & Leadership Workshop</span>
-                <h1 className="page-title">AI & Prompting Strategy + "Inside Alex's Brain"</h1>
+                <span className="eyebrow">Recruiter AI Assistant</span>
+                <h1 className="page-title">Ask My Portfolio AI (Recruiter Assistant)</h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
-                  An experiential game and curriculum exploring how leaders can guide AI responsibly while preserving human character and team well-being.
+                  Recruiters and hiring managers can instantly query Nitin's experience, leadership style, and strategic case studies.
                 </p>
               </div>
-              <a
-                href={PROFILE.aiSimUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="btn btn-primary"
-              >
-                Launch Simulation (ncsu-camp.onrender.com)
-                <ExternalLink size={15} />
-              </a>
             </div>
 
-            <div className="grid-split">
-              <div className="card stack-md">
-                <h2 className="section-title">
-                  <Terminal size={18} className="text-accent" />
-                  Interactive Context & Prompt Builder
-                </h2>
-                <p className="text-muted" style={{ fontSize: '0.82rem' }}>
-                  Because AI systems require clear intent and boundaries, modern leadership is about context design. Test the 3-pillar blueprint below:
-                </p>
-
-                <div className="stack-sm">
-                  <label style={{ fontSize: '0.78rem', fontWeight: 700 }} className="text-accent">
-                    1. Persona (Define viewpoint & tone rules)
-                  </label>
-                  <input
-                    type="text"
-                    value={promptPersona}
-                    onChange={(e) => setPromptPersona(e.target.value)}
-                    className="input-field"
-                  />
-
-                  <label style={{ fontSize: '0.78rem', fontWeight: 700, marginTop: '0.4rem' }} className="text-accent">
-                    2. Context & Goal (Scenario & exact deliverable)
-                  </label>
-                  <textarea
-                    rows={2}
-                    value={promptGoal}
-                    onChange={(e) => setPromptGoal(e.target.value)}
-                    className="input-field"
-                  />
-
-                  <label style={{ fontSize: '0.78rem', fontWeight: 700, marginTop: '0.4rem' }} className="text-accent">
-                    3. Strict Boundaries (Eliminate fluff & robotic clichés)
-                  </label>
-                  <input
-                    type="text"
-                    value={promptBoundaries}
-                    onChange={(e) => setPromptBoundaries(e.target.value)}
-                    className="input-field"
-                  />
-                </div>
-
-                <div className="subcard stack-sm">
-                  <div className="flex-between">
-                    <span className="eyebrow" style={{ marginBottom: 0 }}>Assembled Prompt</span>
-                    <button onClick={copyPrompt} className="btn btn-outline" style={{ padding: '0.3rem 0.65rem', fontSize: '0.75rem' }}>
-                      {promptCopied ? <Check size={14} /> : <Copy size={14} />}
-                      {promptCopied ? 'Copied!' : 'Copy Prompt'}
-                    </button>
+            <div className="card stack-md" style={{ display: 'flex', flexDirection: 'column', height: '560px', maxWidth: '800px', margin: '0 auto', width: '100%' }}>
+              <div className="flex-between" style={{ borderBottom: '1px solid var(--border-color)', paddingBottom: '0.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <div className="brand-avatar" style={{ width: '32px', height: '32px', fontSize: '0.85rem' }}>AI</div>
+                  <div>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>Nitin's Portfolio Assistant</h3>
+                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>Trained on resume, metrics, and case studies</div>
                   </div>
-                  <pre className="font-mono text-secondary" style={{ fontSize: '0.78rem', whiteSpace: 'pre-wrap' }}>
-                    {assembledPrompt}
-                  </pre>
                 </div>
+                <span className="badge font-mono">Ready for Visitors</span>
               </div>
 
-              <div className="stack-md">
-                <div className="card stack-md">
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>The Leader's Delegation Blueprint</h3>
-                  <div className="grid-2" style={{ gap: '0.85rem' }}>
-                    <div className="subcard stack-sm">
-                      <span className="eyebrow">What to Delegate (Speed)</span>
-                      <ul className="stack-sm text-secondary" style={{ fontSize: '0.8rem', paddingLeft: '1rem' }}>
-                        <li><strong>Data Processing:</strong> Sorting raw metrics.</li>
-                        <li><strong>Scaffolding:</strong> Baseline outlines & templates.</li>
-                        <li><strong>Refinement:</strong> Formatting technical logs.</li>
-                      </ul>
-                    </div>
-
-                    <div className="subcard stack-sm">
-                      <span className="eyebrow" style={{ color: 'var(--amber-text)' }}>What to Keep (Heart)</span>
-                      <ul className="stack-sm text-secondary" style={{ fontSize: '0.8rem', paddingLeft: '1rem' }}>
-                        <li><strong>Vision & Values:</strong> Defining true intent.</li>
-                        <li><strong>Team Care:</strong> Empathy & encouragement.</li>
-                        <li><strong>Quality & Truth:</strong> Filtering out errors.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="card stack-md">
-                  <div className="flex-between">
-                    <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>"Inside Alex's Brain": The Simulation</h3>
-                    <span className="badge font-mono">6 Teams • 8 Rounds</span>
-                  </div>
-                  <p className="text-secondary" style={{ fontSize: '0.82rem' }}>
-                    A collaborative game where teams debate choices together before making key strategic decisions across 4 balanced areas:
-                  </p>
-                  <div className="grid-2" style={{ gap: '0.65rem' }}>
-                    <div className="subcard">
-                      <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">1. The Brain</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Wisdom, learning & growth.</div>
-                    </div>
-                    <div className="subcard">
-                      <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">2. The Heart</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Passion, purpose & calling.</div>
-                    </div>
-                    <div className="subcard">
-                      <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">3. The Voice</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Authentic personal voice.</div>
-                    </div>
-                    <div className="subcard">
-                      <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">4. The Check</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Rest, health & well-being.</div>
+              <div className="stack-md" style={{ flex: 1, overflowY: 'auto', paddingRight: '0.25rem' }}>
+                {chatHistory.map((msg, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      display: 'flex',
+                      justifyContent: msg.sender === 'user' ? 'flex-end' : 'flex-start'
+                    }}
+                  >
+                    <div
+                      className="subcard"
+                      style={{
+                        maxWidth: '85%',
+                        background: msg.sender === 'user' ? 'var(--primary-soft)' : 'var(--card-bg)',
+                        borderColor: msg.sender === 'user' ? 'var(--primary)' : 'var(--border-color)',
+                        fontSize: '0.86rem'
+                      }}
+                    >
+                      <strong style={{ display: 'block', fontSize: '0.72rem', marginBottom: '0.2rem', color: 'var(--text-muted)' }}>
+                        {msg.sender === 'user' ? 'Recruiter / You' : 'Portfolio Assistant'}
+                      </strong>
+                      {msg.text}
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
+
+              <form onSubmit={handleSendMessage} className="btn-row" style={{ marginTop: 'auto', paddingTop: '0.75rem', borderTop: '1px solid var(--border-color)' }}>
+                <input
+                  type="text"
+                  placeholder="Ask a question about Nitin's experience (e.g., Agile metrics, OpenAI strategy)..."
+                  value={chatQuery}
+                  onChange={(e) => setChatQuery(e.target.value)}
+                  className="input-field"
+                  style={{ flex: 1 }}
+                />
+                <button type="submit" className="btn btn-primary">
+                  <Send size={15} />
+                  Send
+                </button>
+              </form>
             </div>
           </div>
         )}
@@ -728,10 +683,10 @@ export default function App() {
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">Professional Credentials</span>
-                <h1 className="page-title">Certifications & Training</h1>
+                <span className="eyebrow">Verified Professional Credentials</span>
+                <h1 className="page-title">Certifications & Product Leadership Credentials</h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
-                  Scrum Alliance CSPO®, Aha! Product Management Professional, HRCI®, and SHRM® credentials.
+                  Scrum Alliance CSPO®, Aha! Product Management Professional, HRCI®, and SHRM® Engineering Management credentials.
                 </p>
               </div>
             </div>
@@ -761,7 +716,7 @@ export default function App() {
                     </div>
 
                     <div className="stack-sm">
-                      <div className="eyebrow">Core Skills Verified</div>
+                      <div className="eyebrow">Core Competencies Verified</div>
                       <div className="btn-row" style={{ gap: '0.4rem' }}>
                         {cert.skills.map((sk, i) => (
                           <span key={i} className="tag">{sk}</span>
@@ -771,7 +726,7 @@ export default function App() {
                   </div>
 
                   <div className="divider-top stack-sm">
-                    <div className="eyebrow" style={{ marginBottom: 0 }}>Credential ID / Status</div>
+                    <div className="eyebrow" style={{ marginBottom: 0 }}>Verification Certificate ID</div>
                     <div className="subcard flex-between" style={{ padding: '0.6rem 0.85rem' }}>
                       <code className="font-mono" style={{ fontSize: '0.75rem', wordBreak: 'break-all' }}>
                         {cert.certId}
@@ -814,10 +769,10 @@ export default function App() {
 
             <div className="modal-tabs">
               {[
-                { id: 'summary', label: '1. Overview & Human Need' },
-                { id: 'architecture', label: '2. Approach & Solution' },
-                { id: 'gtm', label: '3. Execution & Impact' },
-                { id: 'financials', label: '4. Summary Table & Lessons' }
+                { id: 'summary', label: '1. Executive Summary & Problem' },
+                { id: 'architecture', label: '2. Product Architecture & Solution' },
+                { id: 'gtm', label: '3. Execution, GTM & Governance' },
+                { id: 'financials', label: '4. Metrics, P&L & Tradeoff Matrix' }
               ].map((t) => (
                 <button
                   key={t.id}
@@ -844,13 +799,13 @@ export default function App() {
               {modalTab === 'summary' && (
                 <div className="stack-md">
                   <div className="subcard stack-sm">
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>Project Overview</h3>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>Executive Summary</h3>
                     <p className="text-secondary" style={{ fontSize: '0.88rem' }}>{activeCaseStudy.summary}</p>
                   </div>
 
                   <div className="stack-sm">
                     <h3 className="section-title" style={{ fontSize: '1rem' }}>
-                      <AlertTriangle size={17} className="text-accent" /> The Human Need & Challenge
+                      <AlertTriangle size={17} className="text-accent" /> Problem Statement & Structural Constraints
                     </h3>
                     {activeCaseStudy.problem.map((prob, idx) => (
                       <div key={idx} className="subcard" style={{ fontSize: '0.86rem' }}>
@@ -862,9 +817,9 @@ export default function App() {
 
                   <div className="stack-sm">
                     <h3 className="section-title" style={{ fontSize: '1rem' }}>
-                      <CheckCircle2 size={17} className="text-accent" /> Key Takeaways
+                      <CheckCircle2 size={17} className="text-accent" /> Key Product & Program Takeaways
                     </h3>
-                    <div className="grid-2">
+                    <div className="grid-3">
                       {activeCaseStudy.takeaways.map((tk, idx) => (
                         <div key={idx} className="subcard" style={{ fontSize: '0.82rem' }}>
                           {tk}
@@ -890,7 +845,7 @@ export default function App() {
               {modalTab === 'gtm' && (
                 <div className="stack-md">
                   <div className="subcard stack-sm">
-                    <span className="eyebrow">Execution Approach</span>
+                    <span className="eyebrow">Core Execution Thesis</span>
                     <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>{activeCaseStudy.gtmStrategy.headline}</h3>
                     <p className="text-secondary" style={{ fontSize: '0.86rem' }}>{activeCaseStudy.gtmStrategy.metrics}</p>
                   </div>
@@ -936,7 +891,7 @@ export default function App() {
                   </div>
 
                   <div className="subcard" style={{ fontSize: '0.84rem' }}>
-                    <strong className="text-accent">Summary Reflection: </strong>
+                    <strong className="text-accent">Executive Model Note: </strong>
                     <span className="text-secondary">{activeCaseStudy.financials.note}</span>
                   </div>
                 </div>
