@@ -16,7 +16,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Linkedin,
   GraduationCap,
   Sun,
   Moon,
@@ -34,6 +33,20 @@ import {
   CASE_STUDIES,
   CERTIFICATIONS
 } from './data/portfolioData';
+
+const LinkedInLogo = ({ size = 16, ...props }) => (
+  <svg
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    {...props}
+  >
+    <path d="M6.94 8.5A1.75 1.75 0 1 1 6.94 5a1.75 1.75 0 0 1 0 3.5ZM5.89 10.45h2.1v8.55h-2.1V10.45Zm6.15 0h2.01v1.17h.03c.28-.53 1.01-1.09 2.08-1.09 2.22 0 2.63 1.46 2.63 3.36v4.91h-2.1v-4.6c0-1.09-.02-2.5-1.52-2.5-1.53 0-1.76 1.19-1.76 2.42v4.68h-2.1V10.45Z" />
+  </svg>
+);
 
 export default function App() {
   const [theme, setTheme] = useState('light');
@@ -173,7 +186,7 @@ export default function App() {
                   rel="noreferrer"
                   className="btn btn-outline"
                 >
-                  <Linkedin size={16} />
+                  <LinkedInLogo size={16} />
                   LinkedIn
                   <ArrowUpRight size={14} />
                 </a>
@@ -385,7 +398,7 @@ export default function App() {
                   rel="noreferrer"
                   className="btn btn-primary"
                 >
-                  <Linkedin size={15} />
+                  <LinkedInLogo size={15} />
                   Connect on LinkedIn
                   <ExternalLink size={14} />
                 </a>
