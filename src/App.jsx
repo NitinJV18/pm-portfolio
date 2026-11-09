@@ -58,7 +58,7 @@ export default function App() {
   const [modalTab, setModalTab] = useState('summary');
   const [copiedId, setCopiedId] = useState(null);
 
-  // Ask Portfolio AI Assistant State (Public Recruiter-Ready Chat Simulator)
+  // Ask Portfolio AI Assistant State (Connected to Render Backend Proxy)
   const [chatQuery, setChatQuery] = useState('');
   const [chatHistory, setChatHistory] = useState([
     {
@@ -85,19 +85,16 @@ export default function App() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-const handleSendMessage = async (e) => {
+  const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!chatQuery.trim()) return;
 
     const userMsg = chatQuery;
     setChatQuery('');
     setChatHistory((prev) => [...prev, { sender: 'user', text: userMsg }]);
-
-    // Add a temporary loading message
     setChatHistory((prev) => [...prev, { sender: 'ai', text: 'Thinking...' }]);
 
     try {
-      // Replace with your actual Render backend URL
       const response = await fetch('https://pm-portfolio-backend-1qdk.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -106,17 +103,16 @@ const handleSendMessage = async (e) => {
 
       const data = await response.json();
       
-      // Remove the "Thinking..." message and add the real AI reply
       setChatHistory((prev) => {
         const newHistory = [...prev];
-        newHistory.pop(); // remove thinking
+        newHistory.pop(); // remove "Thinking..."
         return [...newHistory, { sender: 'ai', text: data.reply || 'Sorry, no response received.' }];
       });
     } catch (error) {
       setChatHistory((prev) => {
         const newHistory = [...prev];
         newHistory.pop();
-        return [...newHistory, { sender: 'ai', text: 'Error connecting to the AI assistant. Please try again later.' }];
+        return [...newHistory, { sender: 'ai', text: 'Error connecting to the AI assistant server. Please try again later.' }];
       });
     }
   };
@@ -633,10 +629,10 @@ const handleSendMessage = async (e) => {
                   <div className="brand-avatar" style={{ width: '32px', height: '32px', fontSize: '0.85rem' }}>AI</div>
                   <div>
                     <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>Nitin's Portfolio Assistant</h3>
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>Trained on resume, metrics, and case studies</div>
+                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>Powered securely via Render & Gemini API</div>
                   </div>
                 </div>
-                <span className="badge font-mono">Ready for Visitors</span>
+                <span className="badge font-mono">Live Proxy</span>
               </div>
 
               <div className="stack-md" style={{ flex: 1, overflowY: 'auto', paddingRight: '0.25rem' }}>

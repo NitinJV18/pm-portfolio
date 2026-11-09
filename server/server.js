@@ -6,7 +6,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// System prompt context to guide Gemini on your background
 const SYSTEM_CONTEXT = "You are Nitin Vedanand's portfolio AI assistant. Answer recruiter questions professionally based on his profile: M.E.M. student at NC State (3.9 GPA), former Software Engineer at Amdocs (+25% velocity), and holder of the CSPO certification. Keep answers concise, helpful, and focused on product management, AI builds, and leadership.";
 
 app.post('/api/chat', async (req, res) => {
