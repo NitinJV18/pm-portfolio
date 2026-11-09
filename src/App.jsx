@@ -98,7 +98,7 @@ const handleSendMessage = async (e) => {
 
     try {
       // Replace with your actual Render backend URL
-      const response = await fetch('https://YOUR-RENDER-BACKEND-URL.onrender.com/api/chat', {
+      const response = await fetch('https://pm-portfolio-backend-1qdk.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMsg })
