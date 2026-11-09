@@ -85,7 +85,7 @@ export default function App() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  const handleSendMessage = async (e) => {
+const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!chatQuery.trim()) return;
 
@@ -116,7 +116,6 @@ export default function App() {
       });
     }
   };
-
   return (
     <div className={`app-shell ${theme === 'dark' ? 'dark-theme' : ''}`}>
       {/* Sticky Top Header */}
