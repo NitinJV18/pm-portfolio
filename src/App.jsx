@@ -85,7 +85,7 @@ export default function App() {
     setTimeout(() => setCopiedId(null), 2000);
   };
 
-  const handleSendMessage = (e) => {
+const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!chatQuery.trim()) return;
 
@@ -93,26 +93,32 @@ export default function App() {
     setChatQuery('');
     setChatHistory((prev) => [...prev, { sender: 'user', text: userMsg }]);
 
-    // Intelligent simulated recruiter response
-    setTimeout(() => {
-      let reply = "That's a great question about Nitin's background. ";
-      const q = userMsg.toLowerCase();
-      if (q.includes('agile') || q.includes('amdocs') || q.includes('sprint') || q.includes('velocity')) {
-        reply += "At Amdocs, Nitin increased team sprint velocity by 25% and maintained a 90%+ delivery predictability across 3 product pillars by aligning cross-functional stakeholders and refining Agile user stories.";
-      } else if (q.includes('openai') || q.includes('smb') || q.includes('strategy') || q.includes('chatgpt')) {
-        reply += "In his OpenAI ChatGPT Business case study, Nitin designed a $79/mo flat-rate tier targeting 33.2M US SMBs trapped in 'The Missing Middle,' modeling a $1.21B 3-year revenue build with 56% operating margins.";
-      } else if (q.includes('faith') || q.includes('church') || q.includes('ministry') || q.includes('servant') || q.includes('leader')) {
-        reply += "Nitin's leadership is anchored in his personal faith and a servant-leadership mindset. He is actively involved as a student leader at Ignite Campus Ministry and a young adult leader & worship team member at CityMovement Church Raleigh.";
-      } else if (q.includes('nc state') || q.includes('education') || q.includes('gpa') || q.includes('degree')) {
-        reply += "Nitin is currently pursuing his Master of Engineering Management (M.E.M.) at NC State with a 3.9 GPA, focusing on AI engineering management, economics, and product lifecycle management.";
-      } else if (q.includes('caterpillar') || q.includes('taas') || q.includes('mining')) {
-        reply += "In his Caterpillar case study, Nitin architected a Throughput-as-a-Service (TaaS) business model for autonomous haulage systems, expanding asset LTV from $3.5M to $10M+ while targeting 95%+ fleet uptime.";
-      } else {
-        reply += `Nitin brings a unique blend of technical depth (Python, React, BERT NLP) and strategic product management. You can explore his full work history in the Experience tab or review his 10 detailed case studies!`;
-      }
+    // Add a temporary loading message
+    setChatHistory((prev) => [...prev, { sender: 'ai', text: 'Thinking...' }]);
 
-      setChatHistory((prev) => [...prev, { sender: 'ai', text: reply }]);
-    }, 600);
+    try {
+      // Replace with your actual Render backend URL
+      const response = await fetch('https://YOUR-RENDER-BACKEND-URL.onrender.com/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMsg })
+      });
+
+      const data = await response.json();
+      
+      // Remove the "Thinking..." message and add the real AI reply
+      setChatHistory((prev) => {
+        const newHistory = [...prev];
+        newHistory.pop(); // remove thinking
+        return [...newHistory, { sender: 'ai', text: data.reply || 'Sorry, no response received.' }];
+      });
+    } catch (error) {
+      setChatHistory((prev) => {
+        const newHistory = [...prev];
+        newHistory.pop();
+        return [...newHistory, { sender: 'ai', text: 'Error connecting to the AI assistant. Please try again later.' }];
+      });
+    }
   };
 
   return (
