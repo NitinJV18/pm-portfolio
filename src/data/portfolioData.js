@@ -672,7 +672,7 @@ export const CASE_STUDIES = [
       channels: [
         { channel: 'Capability Optimization vs. Resilience', detail: 'Selecting a single capable supplier lowers near-term schedule risk but creates lifetime structural fragility.' },
         { channel: 'Mission-Enabling vs. Mission-Enhancing Governance', detail: 'Subsystems inside real-time operational control loops (FGS) require categorically higher governance and testing budgets than additive instruments (NIRISS).' },
-        { channel: 'Testing as Deliberate Risk Acceptance', detail: 'Extreme testing diligence successfully substituted for supply chain redundancy on JWST—but survival does not equal structural resilience.' }
+        { channel: 'Testing as Risk Acceptance', detail: 'Extreme testing diligence successfully substituted for supply chain redundancy on JWST—but survival does not equal structural resilience.' }
       ],
       metrics: 'Launched December 25, 2021; achieved flawless in-orbit performance across all deep-space observations.'
     },

@@ -1,9 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import {
   Briefcase,
   Award,
   Cpu,
-  Calculator,
   Layers,
   ExternalLink,
   ChevronRight,
@@ -17,7 +16,7 @@ import {
   Mail,
   MapPin,
   Phone,
-  Link,
+  Linkedin,
   GraduationCap,
   Sun,
   Moon,
@@ -44,17 +43,6 @@ export default function App() {
   const [modalTab, setModalTab] = useState('summary');
   const [copiedId, setCopiedId] = useState(null);
 
-  // Simulator 1: OpenAI ChatGPT Business SMB State
-  const [smbHoursSaved, setSmbHoursSaved] = useState(21);
-  const [smbLaborRate, setSmbLaborRate] = useState(50);
-  const [smbPrice, setSmbPrice] = useState(79);
-  const [smbScenario, setSmbScenario] = useState('base');
-
-  // Simulator 2: Caterpillar TaaS Fleet Economics State
-  const [catFleetSize, setCatFleetSize] = useState(50);
-  const [catTonsPerTruck, setCatTonsPerTruck] = useState(5.0);
-  const [catHoursSaved, setCatHoursSaved] = useState(60);
-
   // Interactive AI Prompt Builder State
   const [promptPersona, setPromptPersona] = useState(
     'Act as a critical Senior Product Director and Executive Editor'
@@ -74,40 +62,10 @@ export default function App() {
     'Systems, PLM & Supply Chain'
   ];
 
-  const filteredProjects = useMemo(() => {
+  const filteredProjects = React.useMemo(() => {
     if (selectedCategory === 'All') return CASE_STUDIES;
     return CASE_STUDIES.filter((p) => p.category === selectedCategory);
   }, [selectedCategory]);
-
-  // OpenAI Simulator Math
-  const smbSimResults = useMemo(() => {
-    const weeklyValue = smbHoursSaved * smbLaborRate;
-    const monthlyValue = weeklyValue * 4;
-    const customerRoiMultiple = (monthlyValue / smbPrice).toFixed(1);
-    const scaleFactor = smbScenario === 'base' ? 1 : 0.5;
-    const yr3Accounts = Math.round(587000 * scaleFactor);
-    const threeYrRev = (1.21 * scaleFactor * (smbPrice / 79)).toFixed(2);
-    const threeYrProfit = Math.round((smbScenario === 'base' ? 648 : 298) * (smbPrice / 79));
-    return { weeklyValue, monthlyValue, customerRoiMultiple, yr3Accounts, threeYrRev, threeYrProfit };
-  }, [smbHoursSaved, smbLaborRate, smbPrice, smbScenario]);
-
-  // Caterpillar TaaS Simulator Math
-  const catSimResults = useMemo(() => {
-    const baseFeePerTruck = 600000;
-    const perfBonusPerTruck = catTonsPerTruck * 1000000 * 0.2;
-    const arrPerTruck = baseFeePerTruck + perfBonusPerTruck;
-    const internalCostPerTruck = 570000;
-    const fleetArrMillions = ((arrPerTruck * catFleetSize) / 1000000).toFixed(1);
-    const fleetNetMarginMillions = (((arrPerTruck - internalCostPerTruck) * catFleetSize) / 1000000).toFixed(1);
-    const recoveredRevenuePerTruck = catHoursSaved * 50000;
-    const totalFleetRecoveredMillions = ((recoveredRevenuePerTruck * catFleetSize) / 1000000).toFixed(1);
-    return {
-      arrPerTruck: (arrPerTruck / 1000000).toFixed(2),
-      fleetArrMillions,
-      fleetNetMarginMillions,
-      totalFleetRecoveredMillions
-    };
-  }, [catFleetSize, catTonsPerTruck, catHoursSaved]);
 
   const copyCertId = (id) => {
     navigator.clipboard.writeText(id);
@@ -144,7 +102,6 @@ export default function App() {
               { id: 'overview', label: 'Overview', icon: Layers },
               { id: 'experience', label: 'Experience & Bio', icon: GraduationCap },
               { id: 'projects', label: 'Projects & Case Studies (10)', icon: Briefcase },
-              { id: 'simulators', label: 'ROI Calculators', icon: Calculator },
               { id: 'ai-lab', label: 'AI Curriculum & Sim', icon: Cpu },
               { id: 'certifications', label: 'Credentials (4)', icon: Award }
             ].map((item) => {
@@ -216,7 +173,7 @@ export default function App() {
                   rel="noreferrer"
                   className="btn btn-outline"
                 >
-                  <Link size={16} />
+                  <Linkedin size={16} />
                   LinkedIn
                   <ArrowUpRight size={14} />
                 </a>
@@ -428,7 +385,7 @@ export default function App() {
                   rel="noreferrer"
                   className="btn btn-primary"
                 >
-                  <Link size={15} />
+                  <Linkedin size={15} />
                   Connect on LinkedIn
                   <ExternalLink size={14} />
                 </a>
@@ -479,9 +436,9 @@ export default function App() {
                     <div className="flex-between">
                       <div>
                         <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>{edu.school}</h3>
-                        <div className="text-accent" style={{ fontSize: '0.88rem', fontWeight: 600 }}>
+                        <p className="text-accent" style={{ fontSize: '0.88rem', fontWeight: 600 }}>
                           {edu.degree}
-                        </div>
+                        </p>
                       </div>
                       <span className="badge font-mono">CGPA: {edu.gpa}</span>
                     </div>
@@ -603,227 +560,7 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 4: INTERACTIVE ROI & P&L SANDBOX ==================== */}
-        {activePage === 'simulators' && (
-          <div className="stack-lg">
-            <div className="page-header">
-              <div>
-                <span className="eyebrow">Interactive Quantitative Modeling</span>
-                <h1 className="page-title">Product ROI & Unit Economics Sandbox</h1>
-                <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
-                  Test the financial assumptions behind the OpenAI ChatGPT Business ($1.21B) and Caterpillar Autonomous TaaS ($80M ARR) models.
-                </p>
-              </div>
-            </div>
-
-            <div className="grid-2">
-              {/* Simulator 1: OpenAI ChatGPT Business */}
-              <div className="card stack-md">
-                <div>
-                  <span className="badge">Model 01 • SaaS Pricing & P&L</span>
-                  <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginTop: '0.5rem' }}>
-                    OpenAI ChatGPT Business — SMB Value & P&L Simulator
-                  </h2>
-                  <p className="text-muted" style={{ fontSize: '0.8rem' }}>
-                    Adjust weekly SMB hours saved (Owner, Marketing, Support, Finance) and stress-test the 3-Year P&L.
-                  </p>
-                </div>
-
-                <div className="stack-md">
-                  <div>
-                    <div className="flex-between" style={{ fontSize: '0.8rem', marginBottom: '0.35rem' }}>
-                      <span>Weekly Team Hours Saved (Baseline: 17–25 hrs)</span>
-                      <strong className="font-mono text-accent">{smbHoursSaved} hrs / week</strong>
-                    </div>
-                    <input
-                      type="range"
-                      min="5"
-                      max="40"
-                      value={smbHoursSaved}
-                      onChange={(e) => setSmbHoursSaved(Number(e.target.value))}
-                      className="range-slider"
-                    />
-                  </div>
-
-                  <div>
-                    <div className="flex-between" style={{ fontSize: '0.8rem', marginBottom: '0.35rem' }}>
-                      <span>Blended SMB Labor Cost (Baseline: $50/hr)</span>
-                      <strong className="font-mono text-accent">${smbLaborRate} / hour</strong>
-                    </div>
-                    <input
-                      type="range"
-                      min="25"
-                      max="100"
-                      step="5"
-                      value={smbLaborRate}
-                      onChange={(e) => setSmbLaborRate(Number(e.target.value))}
-                      className="range-slider"
-                    />
-                  </div>
-
-                  <div>
-                    <div className="flex-between" style={{ fontSize: '0.8rem', marginBottom: '0.35rem' }}>
-                      <span>Flat Monthly Subscription Price (Proposed: $79/mo)</span>
-                      <strong className="font-mono text-accent">${smbPrice} / month</strong>
-                    </div>
-                    <input
-                      type="range"
-                      min="49"
-                      max="149"
-                      step="10"
-                      value={smbPrice}
-                      onChange={(e) => setSmbPrice(Number(e.target.value))}
-                      className="range-slider"
-                    />
-                  </div>
-
-                  <div className="flex-between">
-                    <span style={{ fontSize: '0.8rem', fontWeight: 600 }}>Acquisition Growth Scenario:</span>
-                    <div className="btn-row" style={{ gap: '0.4rem' }}>
-                      <button
-                        onClick={() => setSmbScenario('base')}
-                        className={`nav-tab ${smbScenario === 'base' ? 'active' : ''}`}
-                        style={{ border: '1px solid var(--border-color)' }}
-                      >
-                        Base Case (13% SAM)
-                      </button>
-                      <button
-                        onClick={() => setSmbScenario('floor')}
-                        className={`nav-tab ${smbScenario === 'floor' ? 'active' : ''}`}
-                        style={{ border: '1px solid var(--border-color)' }}
-                      >
-                        50% Floor Stress-Test
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid-2 divider-top">
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>Monthly Labor Value Unlocked</div>
-                    <div className="metric-value">${smbSimResults.monthlyValue.toLocaleString()}/mo</div>
-                    <div className="text-accent" style={{ fontSize: '0.75rem', fontWeight: 600 }}>
-                      {smbSimResults.customerRoiMultiple}x Customer Value-to-Price
-                    </div>
-                  </div>
-
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>Year 3 Active SMB Accounts</div>
-                    <div className="metric-value">{smbSimResults.yr3Accounts.toLocaleString()}</div>
-                    <div className="text-muted" style={{ fontSize: '0.75rem' }}>85% Annual Embedded Retention</div>
-                  </div>
-
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>3-Year Cumulative Revenue</div>
-                    <div className="metric-value">${smbSimResults.threeYrRev}B</div>
-                    <div className="text-muted" style={{ fontSize: '0.75rem' }}>Blended CAC: $145 / account</div>
-                  </div>
-
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>3-Year Operating Profit</div>
-                    <div className="metric-value">${smbSimResults.threeYrProfit}M</div>
-                    <div className="text-muted" style={{ fontSize: '0.75rem' }}>Margin: 37% (Yr 1) → 56% (Yr 3)</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Simulator 2: Caterpillar TaaS */}
-              <div className="card stack-md">
-                <div>
-                  <span className="badge badge-amber">Model 02 • Cyber-Physical TaaS</span>
-                  <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginTop: '0.5rem' }}>
-                    Caterpillar Autonomous Haulage (Cat 793) TaaS Calculator
-                  </h2>
-                  <p className="text-muted" style={{ fontSize: '0.8rem' }}>
-                    Simulate Caterpillar ARR ($600K SLA + $0.20/ton) and Mine Operator Downtime Recovery ($50K/hr).
-                  </p>
-                </div>
-
-                <div className="stack-md">
-                  <div>
-                    <div className="flex-between" style={{ fontSize: '0.8rem', marginBottom: '0.35rem' }}>
-                      <span>Autonomous Mine Fleet Size (Standard Tier-1: 50 Trucks)</span>
-                      <strong className="font-mono text-accent">{catFleetSize} Cat 793 Trucks</strong>
-                    </div>
-                    <input
-                      type="range"
-                      min="10"
-                      max="100"
-                      step="5"
-                      value={catFleetSize}
-                      onChange={(e) => setCatFleetSize(Number(e.target.value))}
-                      className="range-slider"
-                    />
-                  </div>
-
-                  <div>
-                    <div className="flex-between" style={{ fontSize: '0.8rem', marginBottom: '0.35rem' }}>
-                      <span>Annual Payload Moved per Truck (Baseline: 5.0M Tons)</span>
-                      <strong className="font-mono text-accent">{catTonsPerTruck.toFixed(1)}M Tons / yr</strong>
-                    </div>
-                    <input
-                      type="range"
-                      min="3.0"
-                      max="7.0"
-                      step="0.5"
-                      value={catTonsPerTruck}
-                      onChange={(e) => setCatTonsPerTruck(Number(e.target.value))}
-                      className="range-slider"
-                    />
-                  </div>
-
-                  <div>
-                    <div className="flex-between" style={{ fontSize: '0.8rem', marginBottom: '0.35rem' }}>
-                      <span>Unplanned Downtime Avoided via Helios NOC (85% → 95% Uptime)</span>
-                      <strong className="font-mono text-accent">{catHoursSaved} hrs / truck / yr</strong>
-                    </div>
-                    <input
-                      type="range"
-                      min="20"
-                      max="100"
-                      step="5"
-                      value={catHoursSaved}
-                      onChange={(e) => setCatHoursSaved(Number(e.target.value))}
-                      className="range-slider"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid-2 divider-top">
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>TaaS Revenue per Truck / Yr</div>
-                    <div className="metric-value">${catSimResults.arrPerTruck}M ARR</div>
-                    <div className="text-muted" style={{ fontSize: '0.75rem' }}>vs. $300K–$700K Traditional</div>
-                  </div>
-
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>Total Caterpillar Fleet ARR</div>
-                    <div className="metric-value">${catSimResults.fleetArrMillions}M / yr</div>
-                    <div className="text-muted" style={{ fontSize: '0.75rem' }}>
-                      Net Margin: ${catSimResults.fleetNetMarginMillions}M/yr
-                    </div>
-                  </div>
-
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>Mine Operator Recovered Revenue</div>
-                    <div className="metric-value">${catSimResults.totalFleetRecoveredMillions}M / yr</div>
-                    <div className="text-muted" style={{ fontSize: '0.75rem' }}>At $50,000/hr lost ore production</div>
-                  </div>
-
-                  <div className="subcard">
-                    <div className="text-muted" style={{ fontSize: '0.72rem' }}>10-Year Asset LTV Expansion</div>
-                    <div className="metric-value">$3.5M → $10M+</div>
-                    <div className="text-accent" style={{ fontSize: '0.75rem', fontWeight: 600 }}>
-                      Cat Financial break-even in 3.5–4 yrs
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* ==================== PAGE 5: AI CURRICULUM & LIVE SIMULATION ==================== */}
+        {/* ==================== PAGE 4: AI CURRICULUM & LIVE SIMULATION ==================== */}
         {activePage === 'ai-lab' && (
           <div className="stack-lg">
             <div className="page-header">
@@ -957,7 +694,7 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 6: CERTIFICATIONS (4) ==================== */}
+        {/* ==================== PAGE 5: CERTIFICATIONS (4) ==================== */}
         {activePage === 'certifications' && (
           <div className="stack-lg">
             <div className="page-header">
