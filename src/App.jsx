@@ -21,7 +21,8 @@ import {
   Moon,
   ArrowUpRight,
   Users,
-  Download
+  Download,
+  Heart
 } from 'lucide-react';
 import {
   PROFILE,
@@ -70,9 +71,10 @@ export default function App() {
 
   const categories = [
     'All',
-    'Technical & AI Builds',
-    'Product & GTM Strategy',
-    'Systems, PLM & Supply Chain'
+    'Product Builds',
+    'Product Strategy',
+    'AI & Data Ethics',
+    'Systems & Operations'
   ];
 
   const filteredProjects = React.useMemo(() => {
@@ -113,9 +115,9 @@ export default function App() {
           <nav className="nav-bar">
             {[
               { id: 'overview', label: 'Overview', icon: Layers },
-              { id: 'experience', label: 'Experience & Bio', icon: GraduationCap },
+              { id: 'experience', label: 'Experience & Story', icon: GraduationCap },
               { id: 'projects', label: 'Projects & Case Studies (10)', icon: Briefcase },
-              { id: 'ai-lab', label: 'AI Curriculum & Sim', icon: Cpu },
+              { id: 'ai-lab', label: 'AI & Leadership Sim', icon: Cpu },
               { id: 'certifications', label: 'Credentials (4)', icon: Award }
             ].map((item) => {
               const Icon = item.icon;
@@ -151,24 +153,23 @@ export default function App() {
             <section className="card card-lg stack-md">
               <div>
                 <span className="badge">
-                  Seeking Product Manager, Technical Program Manager & Project Manager Roles
+                  Seeking Product Manager & Technical Program Manager Roles
                 </span>
                 <h1 className="hero-title">
-                  Hi, I’m {PROFILE.shortName} — I build{' '}
-                  <span className="hero-highlight">
-                    AI-native products, scalable roadmaps, and high-velocity teams.
-                  </span>
+                  Hi, I’m {PROFILE.shortName} — <span className="hero-highlight">{PROFILE.tagline}</span>
                 </h1>
-                <p className="text-secondary">{PROFILE.bio}</p>
+                <p className="text-secondary" style={{ fontSize: '1.05rem', marginTop: '0.75rem' }}>
+                  {PROFILE.bio}
+                </p>
               </div>
 
               <div className="btn-row">
                 <button onClick={() => setActivePage('projects')} className="btn btn-primary">
-                  Explore All 10 Projects & Case Studies
+                  Explore My Work & Projects
                   <ChevronRight size={16} />
                 </button>
                 <button onClick={() => setActivePage('experience')} className="btn btn-secondary">
-                  View Work Experience & Education
+                  My Journey & Experience
                 </button>
                 <a
                   href={PROFILE.resumePdfPath}
@@ -207,6 +208,21 @@ export default function App() {
                 </a>
               </div>
 
+              {/* Subtle Faith & Calling Feature Card */}
+              <div className="subcard" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', padding: '1.25rem', borderColor: 'var(--primary-border)' }}>
+                <div style={{ padding: '0.5rem', borderRadius: '0.5rem', background: 'var(--primary-soft)', color: 'var(--primary)' }}>
+                  <Heart size={20} />
+                </div>
+                <div>
+                  <div style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--text-main)' }}>
+                    Faith & Community Leadership
+                  </div>
+                  <p className="text-secondary" style={{ fontSize: '0.85rem', marginTop: '0.2rem' }}>
+                    Rooted in Christian faith and servant leadership. Active as a student leader at <strong>Ignite Campus Ministry</strong>, and serving as a young adult leader and worship team member at <strong>CityMovement Church Raleigh</strong>.
+                  </p>
+                </div>
+              </div>
+
               <div className="grid-4 divider-top">
                 {IMPACT_METRICS.map((m, idx) => (
                   <div key={idx} className="subcard">
@@ -227,7 +243,7 @@ export default function App() {
               <div className="card stack-md">
                 <div className="flex-between">
                   <div>
-                    <span className="eyebrow">Career Track Record</span>
+                    <span className="eyebrow">Career & Leadership</span>
                     <h2 className="section-title">Work Experience</h2>
                   </div>
                   <button
@@ -295,7 +311,7 @@ export default function App() {
                 </div>
 
                 <div className="card stack-md">
-                  <h2 className="section-title">Product, Technical & Analytics Toolkit</h2>
+                  <h2 className="section-title">Product, People & Technical Toolkit</h2>
                   {SKILL_GROUPS.map((grp, idx) => (
                     <div key={idx} className="stack-sm">
                       <div className="eyebrow">{grp.title}</div>
@@ -314,8 +330,8 @@ export default function App() {
             <section className="stack-md">
               <div className="flex-between">
                 <div>
-                  <span className="eyebrow">Selected Work & Strategic Blueprints</span>
-                  <h2 className="section-title">Featured Product Builds & Case Studies</h2>
+                  <span className="eyebrow">Selected Work & Case Studies</span>
+                  <h2 className="section-title">Featured Projects & Strategic Studies</h2>
                 </div>
                 <button onClick={() => setActivePage('projects')} className="btn btn-outline">
                   View All 10 Projects <ChevronRight size={15} />
@@ -359,7 +375,7 @@ export default function App() {
                         ))}
                       </div>
                       <div className="flex-between text-accent" style={{ fontSize: '0.8rem', fontWeight: 600 }}>
-                        <span>Inspect Full Case Study</span>
+                        <span>Read Case Study</span>
                         <ArrowUpRight size={16} />
                       </div>
                     </div>
@@ -370,13 +386,13 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 2: EXPERIENCE & BIO ==================== */}
+        {/* ==================== PAGE 2: EXPERIENCE & STORY ==================== */}
         {activePage === 'experience' && (
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">Curriculum Vitae & Leadership</span>
-                <h1 className="page-title">Work Experience, Education & Community Impact</h1>
+                <span className="eyebrow">My Journey & Background</span>
+                <h1 className="page-title">Experience, Education & Community Ministry</h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
                   {PROFILE.location} • {PROFILE.phone} • {PROFILE.emailPrimary}
                 </p>
@@ -453,7 +469,7 @@ export default function App() {
                           {edu.degree}
                         </p>
                       </div>
-                      <span className="badge font-mono">GPA: {edu.gpa}</span>
+                      <span className="badge font-mono">CGPA: {edu.gpa}</span>
                     </div>
                     <div className="text-muted font-mono" style={{ fontSize: '0.78rem' }}>
                       {edu.period} • {edu.location}
@@ -470,17 +486,17 @@ export default function App() {
 
             <section className="stack-md">
               <h2 className="section-title">
-                <Users size={20} className="text-accent" /> Leadership & Community Engagement
+                <Users size={20} className="text-accent" /> Ministry, Leadership & Community Service
               </h2>
-              <div className="grid-3">
+              <div className="grid-2">
                 {LEADERSHIP.map((item, idx) => (
                   <div key={idx} className="card stack-sm">
                     <span className="eyebrow">{item.period}</span>
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>{item.role}</h3>
-                    <div className="text-muted" style={{ fontSize: '0.8rem', fontWeight: 600 }}>
+                    <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>{item.role}</h3>
+                    <div className="text-muted" style={{ fontSize: '0.82rem', fontWeight: 600, marginBottom: '0.5rem' }}>
                       {item.org}
                     </div>
-                    <p className="text-secondary" style={{ fontSize: '0.85rem' }}>
+                    <p className="text-secondary" style={{ fontSize: '0.88rem' }}>
                       {item.detail}
                     </p>
                   </div>
@@ -490,17 +506,17 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 3: PROJECTS & CASE STUDIES (10) ==================== */}
+        {/* ==================== PAGE 3: PROJECTS & CASE STUDIES ==================== */}
         {activePage === 'projects' && (
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">Complete Portfolio Directory</span>
+                <span className="eyebrow">Project Portfolio</span>
                 <h1 className="page-title">
-                  Product Builds, AI Pipelines & Strategic Case Studies ({filteredProjects.length})
+                  Projects & Case Studies ({filteredProjects.length})
                 </h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
-                  Click any project card to open the full interactive dossier, architecture breakdown, and financial model.
+                  Click any card to read the full story, approach, and human impact behind each project.
                 </p>
               </div>
 
@@ -564,7 +580,7 @@ export default function App() {
                       My Role: <strong style={{ color: 'var(--text-main)' }}>{study.role}</strong>
                     </span>
                     <span className="text-accent" style={{ fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
-                      Open Full Case Study <ChevronRight size={15} />
+                      Read Case Study <ChevronRight size={15} />
                     </span>
                   </div>
                 </div>
@@ -573,15 +589,15 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 4: AI CURRICULUM & LIVE SIMULATION ==================== */}
+        {/* ==================== PAGE 4: AI & LEADERSHIP SIM ==================== */}
         {activePage === 'ai-lab' && (
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">AI Powered College Application Assistant & Manager Curriculum</span>
-                <h1 className="page-title">AI & Prompting Strategy + "Inside Alex's Brain" Simulation</h1>
+                <span className="eyebrow">Interactive AI & Leadership Workshop</span>
+                <h1 className="page-title">AI & Prompting Strategy + "Inside Alex's Brain"</h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
-                  Created and coded an experiential, game-based AI curriculum and live simulation demonstrating real-world AI management trade-offs and prompt architecture.
+                  An experiential game and curriculum exploring how leaders can guide AI responsibly while preserving human character and team well-being.
                 </p>
               </div>
               <a
@@ -590,7 +606,7 @@ export default function App() {
                 rel="noreferrer"
                 className="btn btn-primary"
               >
-                Launch Live Simulation (ncsu-camp.onrender.com)
+                Launch Simulation (ncsu-camp.onrender.com)
                 <ExternalLink size={15} />
               </a>
             </div>
@@ -599,15 +615,15 @@ export default function App() {
               <div className="card stack-md">
                 <h2 className="section-title">
                   <Terminal size={18} className="text-accent" />
-                  Interactive Context Engineering & Prompt Builder
+                  Interactive Context & Prompt Builder
                 </h2>
                 <p className="text-muted" style={{ fontSize: '0.82rem' }}>
-                  Because minor input changes yield radically different outputs in probabilistic LLMs, modern executive skill is context design. Customize the 3-pillar Prompt Architecture Blueprint below:
+                  Because AI systems require clear intent and boundaries, modern leadership is about context design. Test the 3-pillar blueprint below:
                 </p>
 
                 <div className="stack-sm">
                   <label style={{ fontSize: '0.78rem', fontWeight: 700 }} className="text-accent">
-                    1. Persona (Define viewpoint, domain authority & tone rules)
+                    1. Persona (Define viewpoint & tone rules)
                   </label>
                   <input
                     type="text"
@@ -617,7 +633,7 @@ export default function App() {
                   />
 
                   <label style={{ fontSize: '0.78rem', fontWeight: 700, marginTop: '0.4rem' }} className="text-accent">
-                    2. Context & Goal (Provide operational scenario & exact deliverable)
+                    2. Context & Goal (Scenario & exact deliverable)
                   </label>
                   <textarea
                     rows={2}
@@ -627,7 +643,7 @@ export default function App() {
                   />
 
                   <label style={{ fontSize: '0.78rem', fontWeight: 700, marginTop: '0.4rem' }} className="text-accent">
-                    3. Strict Boundaries (Eliminate fluff, clichés & length drift)
+                    3. Strict Boundaries (Eliminate fluff & robotic clichés)
                   </label>
                   <input
                     type="text"
@@ -639,7 +655,7 @@ export default function App() {
 
                 <div className="subcard stack-sm">
                   <div className="flex-between">
-                    <span className="eyebrow" style={{ marginBottom: 0 }}>Assembled Executive Prompt</span>
+                    <span className="eyebrow" style={{ marginBottom: 0 }}>Assembled Prompt</span>
                     <button onClick={copyPrompt} className="btn btn-outline" style={{ padding: '0.3rem 0.65rem', fontSize: '0.75rem' }}>
                       {promptCopied ? <Check size={14} /> : <Copy size={14} />}
                       {promptCopied ? 'Copied!' : 'Copy Prompt'}
@@ -653,23 +669,23 @@ export default function App() {
 
               <div className="stack-md">
                 <div className="card stack-md">
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>The Manager's AI Delegation Blueprint</h3>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>The Leader's Delegation Blueprint</h3>
                   <div className="grid-2" style={{ gap: '0.85rem' }}>
                     <div className="subcard stack-sm">
                       <span className="eyebrow">What to Delegate (Speed)</span>
                       <ul className="stack-sm text-secondary" style={{ fontSize: '0.8rem', paddingLeft: '1rem' }}>
-                        <li><strong>Data Processing:</strong> Sorting & filtering raw logs/metrics.</li>
-                        <li><strong>Content Scaffolding:</strong> Baseline PRDs, outlines & templates.</li>
-                        <li><strong>Style Refinement:</strong> Translating technical logs into plain decks.</li>
+                        <li><strong>Data Processing:</strong> Sorting raw metrics.</li>
+                        <li><strong>Scaffolding:</strong> Baseline outlines & templates.</li>
+                        <li><strong>Refinement:</strong> Formatting technical logs.</li>
                       </ul>
                     </div>
 
                     <div className="subcard stack-sm">
-                      <span className="eyebrow" style={{ color: 'var(--amber-text)' }}>What to Keep (Leadership)</span>
+                      <span className="eyebrow" style={{ color: 'var(--amber-text)' }}>What to Keep (Heart)</span>
                       <ul className="stack-sm text-secondary" style={{ fontSize: '0.8rem', paddingLeft: '1rem' }}>
-                        <li><strong>Strategic Vision:</strong> Defining core product direction & intent.</li>
-                        <li><strong>Team Leadership:</strong> Emotional intelligence & motivation.</li>
-                        <li><strong>Quality Assurance:</strong> Strict validation to filter hallucinations.</li>
+                        <li><strong>Vision & Values:</strong> Defining true intent.</li>
+                        <li><strong>Team Care:</strong> Empathy & encouragement.</li>
+                        <li><strong>Quality & Truth:</strong> Filtering out errors.</li>
                       </ul>
                     </div>
                   </div>
@@ -677,28 +693,28 @@ export default function App() {
 
                 <div className="card stack-md">
                   <div className="flex-between">
-                    <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>"Inside Alex's Brain": The Live Game</h3>
-                    <span className="badge font-mono">6 Teams • 8 Prompts</span>
+                    <h3 style={{ fontSize: '1.05rem', fontWeight: 700 }}>"Inside Alex's Brain": The Simulation</h3>
+                    <span className="badge font-mono">6 Teams • 8 Rounds</span>
                   </div>
                   <p className="text-secondary" style={{ fontSize: '0.82rem' }}>
-                    A collaborative multi-team game where 6 teams (1 laptop each) have 1 minute per round to debate metrics before submitting 1 prompt across 8 rounds:
+                    A collaborative game where teams debate choices together before making key strategic decisions across 4 balanced areas:
                   </p>
                   <div className="grid-2" style={{ gap: '0.65rem' }}>
                     <div className="subcard">
                       <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">1. The Brain</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Tracks Academic Power, GPA & test strategy.</div>
+                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Wisdom, learning & growth.</div>
                     </div>
                     <div className="subcard">
                       <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">2. The Heart</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Tracks Passion, extracurriculars & summers.</div>
+                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Passion, purpose & calling.</div>
                     </div>
                     <div className="subcard">
                       <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">3. The Voice</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Tracks Authenticity; cuts AI clichés.</div>
+                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Authentic personal voice.</div>
                     </div>
                     <div className="subcard">
-                      <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">4. The Reality Check</div>
-                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Tracks Stress, Budget & hard deadlines.</div>
+                      <div style={{ fontWeight: 700, fontSize: '0.85rem' }} className="text-accent">4. The Check</div>
+                      <div className="text-muted" style={{ fontSize: '0.75rem' }}>Rest, health & well-being.</div>
                     </div>
                   </div>
                 </div>
@@ -707,15 +723,15 @@ export default function App() {
           </div>
         )}
 
-        {/* ==================== PAGE 5: CERTIFICATIONS (4) ==================== */}
+        {/* ==================== PAGE 5: CERTIFICATIONS ==================== */}
         {activePage === 'certifications' && (
           <div className="stack-lg">
             <div className="page-header">
               <div>
-                <span className="eyebrow">Verified Professional Credentials</span>
-                <h1 className="page-title">Certifications & Product Leadership Credentials</h1>
+                <span className="eyebrow">Professional Credentials</span>
+                <h1 className="page-title">Certifications & Training</h1>
                 <p className="text-muted" style={{ fontSize: '0.88rem', marginTop: '0.25rem' }}>
-                  Scrum Alliance CSPO®, Aha! Product Management Professional, HRCI®, and SHRM® Engineering Management credentials.
+                  Scrum Alliance CSPO®, Aha! Product Management Professional, HRCI®, and SHRM® credentials.
                 </p>
               </div>
             </div>
@@ -745,7 +761,7 @@ export default function App() {
                     </div>
 
                     <div className="stack-sm">
-                      <div className="eyebrow">Core Competencies Verified</div>
+                      <div className="eyebrow">Core Skills Verified</div>
                       <div className="btn-row" style={{ gap: '0.4rem' }}>
                         {cert.skills.map((sk, i) => (
                           <span key={i} className="tag">{sk}</span>
@@ -755,7 +771,7 @@ export default function App() {
                   </div>
 
                   <div className="divider-top stack-sm">
-                    <div className="eyebrow" style={{ marginBottom: 0 }}>Verification Certificate ID</div>
+                    <div className="eyebrow" style={{ marginBottom: 0 }}>Credential ID / Status</div>
                     <div className="subcard flex-between" style={{ padding: '0.6rem 0.85rem' }}>
                       <code className="font-mono" style={{ fontSize: '0.75rem', wordBreak: 'break-all' }}>
                         {cert.certId}
@@ -798,10 +814,10 @@ export default function App() {
 
             <div className="modal-tabs">
               {[
-                { id: 'summary', label: '1. Executive Summary & Problem' },
-                { id: 'architecture', label: '2. Product Architecture & Solution' },
-                { id: 'gtm', label: '3. Execution, GTM & Governance' },
-                { id: 'financials', label: '4. Metrics, P&L & Tradeoff Matrix' }
+                { id: 'summary', label: '1. Overview & Human Need' },
+                { id: 'architecture', label: '2. Approach & Solution' },
+                { id: 'gtm', label: '3. Execution & Impact' },
+                { id: 'financials', label: '4. Summary Table & Lessons' }
               ].map((t) => (
                 <button
                   key={t.id}
@@ -828,13 +844,13 @@ export default function App() {
               {modalTab === 'summary' && (
                 <div className="stack-md">
                   <div className="subcard stack-sm">
-                    <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>Executive Summary</h3>
+                    <h3 style={{ fontSize: '1rem', fontWeight: 700 }}>Project Overview</h3>
                     <p className="text-secondary" style={{ fontSize: '0.88rem' }}>{activeCaseStudy.summary}</p>
                   </div>
 
                   <div className="stack-sm">
                     <h3 className="section-title" style={{ fontSize: '1rem' }}>
-                      <AlertTriangle size={17} className="text-accent" /> Problem Statement & Structural Constraints
+                      <AlertTriangle size={17} className="text-accent" /> The Human Need & Challenge
                     </h3>
                     {activeCaseStudy.problem.map((prob, idx) => (
                       <div key={idx} className="subcard" style={{ fontSize: '0.86rem' }}>
@@ -846,9 +862,9 @@ export default function App() {
 
                   <div className="stack-sm">
                     <h3 className="section-title" style={{ fontSize: '1rem' }}>
-                      <CheckCircle2 size={17} className="text-accent" /> Key Product & Program Takeaways
+                      <CheckCircle2 size={17} className="text-accent" /> Key Takeaways
                     </h3>
-                    <div className="grid-3">
+                    <div className="grid-2">
                       {activeCaseStudy.takeaways.map((tk, idx) => (
                         <div key={idx} className="subcard" style={{ fontSize: '0.82rem' }}>
                           {tk}
@@ -874,7 +890,7 @@ export default function App() {
               {modalTab === 'gtm' && (
                 <div className="stack-md">
                   <div className="subcard stack-sm">
-                    <span className="eyebrow">Core Execution Thesis</span>
+                    <span className="eyebrow">Execution Approach</span>
                     <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>{activeCaseStudy.gtmStrategy.headline}</h3>
                     <p className="text-secondary" style={{ fontSize: '0.86rem' }}>{activeCaseStudy.gtmStrategy.metrics}</p>
                   </div>
@@ -920,7 +936,7 @@ export default function App() {
                   </div>
 
                   <div className="subcard" style={{ fontSize: '0.84rem' }}>
-                    <strong className="text-accent">Executive Model Note: </strong>
+                    <strong className="text-accent">Summary Reflection: </strong>
                     <span className="text-secondary">{activeCaseStudy.financials.note}</span>
                   </div>
                 </div>

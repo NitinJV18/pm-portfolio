@@ -1,9 +1,10 @@
 export const PROFILE = {
   name: 'Nitin Jeremiah Vedanand',
   shortName: 'Nitin Vedanand',
-  role: 'Product Manager & Technical Program Manager',
+  role: 'Product Manager & Leader',
   credentialsBadge: 'CSPO® • M.E.M. @ NC State (3.9 GPA)',
-  bio: 'Master of Engineering Management candidate at NC State (3.9 GPA) and former Software Engineering Associate at Amdocs. Proven track record of increasing sprint velocity by 25%, maintaining 90%+ sprint delivery predictability, and architecting products across AI SaaS, autonomous systems, clinical NLP, and full-stack platforms.',
+  tagline: 'Guided by faith, driven by purpose—building human-centered products and leading with servant heart.',
+  bio: 'I am a Master of Engineering Management student at NC State (3.9 GPA) and a former Software Engineering Associate at Amdocs. Beyond building products and leading Agile teams, my life is anchored in my faith in Christ, serving as a student leader at Ignite Campus Ministry and a young adult leader & worship team member at CityMovement Church Raleigh.',
   location: 'Raleigh, NC',
   phone: '984-382-9995',
   emailPrimary: 'nitinjvedanand@gmail.com',
@@ -17,24 +18,24 @@ export const PROFILE = {
 
 export const IMPACT_METRICS = [
   {
-    label: 'Sprint Velocity & Predictability',
+    label: 'Team Velocity & Delivery',
     value: '+25% / 90%+',
-    sub: 'Agile & OKR roadmaps at Amdocs across 3 product pillars'
+    sub: 'Agile team alignment & predictable delivery at Amdocs'
   },
   {
-    label: 'Projected Feature Revenue',
+    label: 'Projected Feature Value',
     value: '$480K',
-    sub: 'Concept-to-launch UX & mobile CI/CD at ECBEE Innovations'
+    sub: 'Concept-to-launch user experience & mobile platform rollout'
   },
   {
-    label: 'Strategic Case Models',
+    label: 'Strategic Case Studies',
     value: '$1.21B / $80M',
-    sub: 'OpenAI SMB 3-Yr P&L & Caterpillar Autonomous TaaS ARR'
+    sub: 'Comprehensive SMB growth and autonomous fleet strategies'
   },
   {
-    label: 'Applied AI & ML Accuracy',
-    value: '99% PHI / 98% EEG',
-    sub: 'Clinical BERT De-identification (-60% audits) & Biometric ML'
+    label: 'Community & Ministry Impact',
+    value: '52+ Clubs & Groups',
+    sub: 'Serving students, clubs, and campus ministry communities'
   }
 ];
 
@@ -46,8 +47,8 @@ export const EDUCATION = [
     period: 'Aug 2025 – May 2027',
     gpa: '3.9 / 4.0',
     coursework: [
-      'AI for Engineering Managers',
-      'Product Lifecycle Management (EM 507)',
+      'AI for Engineering Leaders',
+      'Product Lifecycle Management',
       'Applied Economics',
       'Project Management'
     ]
@@ -55,14 +56,14 @@ export const EDUCATION = [
   {
     school: 'Vellore Institute of Technology (VIT)',
     location: 'Vellore, India',
-    degree: 'B.Tech in Computer Science Engineering with Business Systems',
+    degree: 'B.Tech in Computer Science & Business Systems',
     period: 'Aug 2019 – Aug 2023',
     gpa: '3.4 / 4.0',
     coursework: [
-      'Software Engineering & Systems Architecture',
+      'Software Engineering & Systems',
       'Data Structures & Machine Learning',
       'Business Systems & Operations',
-      'Database Management & SQL'
+      'Database Management'
     ]
   }
 ];
@@ -74,12 +75,12 @@ export const EXPERIENCE = [
     company: 'NC State Carmichael Facility',
     location: 'Raleigh, NC',
     period: 'Aug 2025 – Present',
-    type: 'Operations & Risk Governance',
+    type: 'Operations & Community Safety',
     highlights: [
-      'Manage end-to-end operations, scheduling, and risk compliance for a portfolio of 52+ university sports and recreation clubs.',
-      'Act as a direct operational extension of professional staff to oversee game-day execution, safety protocols, and cross-functional team coordination.'
+      'Managing daily operations, scheduling, and safety compliance for a vibrant community of 52+ university sports and recreation clubs.',
+      'Acting as a trusted liaison between student leaders and professional staff to ensure smooth event execution and student well-being.'
     ],
-    metrics: ['52+ Clubs Managed', 'Risk & Safety Compliance', 'Cross-Functional Ops']
+    metrics: ['52+ Clubs Supported', 'Safety & Compliance', 'Student Community Care']
   },
   {
     id: 'amdocs',
@@ -87,12 +88,12 @@ export const EXPERIENCE = [
     company: 'Amdocs',
     location: 'Pune, Maharashtra',
     period: 'Aug 2023 – Jul 2025',
-    type: 'Agile Product Delivery & Roadmapping',
+    type: 'Team Collaboration & Agile Delivery',
     highlights: [
-      'Led stakeholder alignment for product roadmaps, user stories, and OKRs in Azure, resulting in a 25% increase in sprint velocity and the successful delivery of 3 high-priority product pillars within a 6-month timeframe.',
-      'Spearheaded KPI-led product development using Agile and Scrum in JIRA to improve delivery predictability and maintain a 90%+ Sprint Success KPI across the product roadmap.'
+      'Facilitated cross-functional team alignment for product roadmaps and user stories in Azure, increasing team velocity by 25% and delivering 3 core product pillars in 6 months.',
+      'Guided Agile and Scrum ceremonies in JIRA, fostering high team trust and maintaining a 90%+ delivery success rate.'
     ],
-    metrics: ['+25% Sprint Velocity', '90%+ Sprint Success KPI', '3 Product Pillars in 6 Mos']
+    metrics: ['+25% Team Velocity', '90%+ Delivery Predictability', '3 Pillars Delivered']
   },
   {
     id: 'ecbee',
@@ -100,12 +101,12 @@ export const EXPERIENCE = [
     company: 'ECBEE Innovations Pvt Ltd',
     location: 'Chennai, Tamil Nadu',
     period: 'Nov 2022 – May 2023',
-    type: '0-to-1 Feature Ownership & Mobile CI/CD',
+    type: 'User Experience & Mobile Apps',
     highlights: [
-      'Owned project features from concept to launch—translating user requirements into responsive prototypes, wireframes, and front-end web interfaces, improving UX and contributing to $480K in projected revenue.',
-      'Oversaw cross-platform mobile app development using Capacitor API integration and CI/CD pipelines, reducing release cycles by 25% and expanding market reach across Android and iOS.'
+      'Translated user needs into intuitive wireframes, responsive prototypes, and front-end interfaces, contributing to $480K in projected product value.',
+      'Built cross-platform mobile app features with smooth CI/CD pipelines, reducing release friction by 25% across Android and iOS.'
     ],
-    metrics: ['$480K Projected Revenue', '-25% Release Cycles', 'Android & iOS CI/CD']
+    metrics: ['$480K Projected Value', '-25% Release Friction', 'Mobile App Launch']
   },
   {
     id: 'dreams-clues',
@@ -113,12 +114,12 @@ export const EXPERIENCE = [
     company: 'Dreams Clues',
     location: 'Delhi, India',
     period: 'Apr 2022 – May 2022',
-    type: 'Product Analytics & User Research',
+    type: 'User Research & Insights',
     highlights: [
-      'Supported project strategy by analyzing market trends, competitor data, and customer behavior using Python, Power BI, and SQL—accelerating data-driven decisions by 15% and informing roadmap planning.',
-      'Leveraged Power BI to visualize continuous user feedback and research data, driving product iterations that increased User Satisfaction (CSAT) by 20% within two fiscal quarters.'
+      'Analyzed customer behavior and user feedback using Python and SQL to help the team make empathetic, data-informed decisions.',
+      'Built visual dashboards that informed product tweaks, helping increase overall User Satisfaction (CSAT) by 20% within two quarters.'
     ],
-    metrics: ['+20% CSAT in 2 Quarters', '+15% Faster Decisions', 'Python / SQL / Power BI']
+    metrics: ['+20% User Satisfaction', 'Python / SQL / Power BI', 'User-Centric Research']
   }
 ];
 
@@ -128,58 +129,53 @@ export const LEADERSHIP = [
     org: 'Ignite Campus Ministry & CityMovement Church (Raleigh)',
     period: '2025 – Present',
     detail:
-      'Serve as a student leader at Ignite Campus Ministry and young adult leader / worship team member at CityMovement Church Raleigh, fostering inclusive community-building, mentorship, and team collaboration.'
+      'Serving as a student leader at Ignite Campus Ministry and young adult leader / worship team member at CityMovement Church Raleigh. My faith is the foundation of my life, inspiring me to serve others with compassion, integrity, and genuine community care.'
   },
   {
-    role: 'Zealous Community & Events Host',
+    role: 'Community & Events Host',
     org: 'International Community & Mentorship Forum',
     period: 'Oct 2023 – Jul 2025',
     detail:
-      'Hosted community-driven conferences and discussion groups for 60+ participants, including an international forum in Malaysia focused on fostering mentorship, inclusive community-building, and cross-cultural collaboration.'
+      'Hosted community-driven conferences and discussion groups for 60+ participants, including an international forum in Malaysia focused on fostering mentorship and meaningful relationships.'
   },
   {
     role: 'Centre Lead, PR & Design',
     org: 'ANOKHA-NGO (Vellore, Tamil Nadu)',
     period: 'Dec 2019 – Aug 2023',
     detail:
-      'Managed 15+ volunteers to deliver weekly educational sessions for underprivileged students while coordinating logistics and stakeholder reporting. Leveraged impact metrics to present the mission to sponsors and secure ongoing support.'
+      'Led 15+ volunteers providing weekly educational mentorship to underprivileged children. Coordinated community outreach and shared impact stories with sponsors to ensure ongoing support.'
   },
   {
-    role: 'Class Prefect, Event Head & Hackathon Lead',
+    role: 'Student Organizer & Leader',
     org: "Bishop Cotton Boys' School & VIT",
     period: '2018 – 2023',
     detail:
-      "Served as Class Prefect and Event Head at Bishop Cotton Boys' School, organized the nationwide Synchronize 2018 Science & IT Fest, and led department-level mathathons and hackathons at VIT."
+      "Served as Class Prefect and Event Head at Bishop Cotton Boys' School, organized nationwide student festivals, and led collaborative hackathons at VIT."
   }
 ];
 
 export const SKILL_GROUPS = [
   {
-    title: 'Product & Program Management',
+    title: 'Product & People Leadership',
     items: [
-      'GTM Strategy & Roadmapping',
-      'Agile / Scrum (CSPO®)',
-      'User Journey Mapping',
-      'A/B Testing & CSAT Analytics',
-      'Market Segmentation',
-      'Business Case Development',
-      'Stakeholder Management',
-      'Conflict Resolution',
-      'Product Lifecycle Management (PLM)'
+      'Product Strategy & Roadmapping',
+      'Agile / Scrum Team Facilitation',
+      'User Journey & Empathy Mapping',
+      'Customer Feedback & CSAT Analysis',
+      'Cross-Functional Collaboration',
+      'Stakeholder Alignment',
+      'Servant Leadership & Mentorship'
     ]
   },
   {
-    title: 'Technical, Data & AI Stack',
+    title: 'Technical & Creative Toolkit',
     items: [
-      'Python & JavaScript / React',
-      'Go (Golang)',
-      'SQL & Power BI',
+      'JavaScript & React',
+      'Python & Data Analysis',
       'Rapid Prototyping & Wireframing',
-      'Salesforce & Azure DevOps',
-      'JIRA & Aha! Roadmaps',
-      'BERT NLP & MLOps Pipelines',
-      'TensorFlow & Scikit-Learn',
-      'Capacitor Mobile & CI/CD'
+      'JIRA & Azure DevOps',
+      'SQL & Power BI Dashboards',
+      'BERT NLP & Applied AI Concepts'
     ]
   }
 ];
@@ -187,515 +183,460 @@ export const SKILL_GROUPS = [
 export const CASE_STUDIES = [
   {
     id: 'presentsir',
-    title: 'PresentSir — AI-Enabled Alumni Networking Platform',
-    subtitle: 'End-to-End Product Management, Sprint Execution & Scalable Full-Stack Architecture',
-    category: 'Technical & AI Builds',
+    title: 'PresentSir — Alumni Mentorship & Networking Platform',
+    subtitle: 'Building a Meaningful Community Space for Student and Alumni Connection',
+    category: 'Product Builds',
     date: '2024 – 2025',
     organization: 'Product & Lead Developer',
-    role: 'Product/Project Manager & Lead Developer',
+    role: 'Product Manager & Lead Developer',
     liveUrl: 'https://www.presentsir.com/',
     heroStats: [
-      { label: 'KPI Attainment', value: '100% Features' },
-      { label: 'Core Stack', value: 'GenAI + Real-Time Chat' },
-      { label: 'Role Scope', value: 'PM + Lead Dev' },
-      { label: 'Live Platform', value: 'presentsir.com' }
+      { label: 'Goal Attainment', value: '100% Met' },
+      { label: 'Focus', value: 'Mentorship & Chat' },
+      { label: 'Role Scope', value: 'PM + Developer' },
+      { label: 'Live Link', value: 'presentsir.com' }
     ],
     summary:
-      'Directed the ideation to execution, sprint planning, and stakeholder alignment for PresentSir—an alumni networking platform—serving as both Project/Product Manager and Lead Developer. Utilized GenAI (ChatGPT) to build scalable backend services and a secure real-time chat system that achieved 100% KPI attainment for all feature requirements.',
+      'Guided the product vision, user journey mapping, and development for PresentSir—an alumni networking platform designed to connect students with experienced mentors. By focusing heavily on genuine user needs and clear communication, the platform achieved 100% of its launch goals.',
     problem: [
-      'Alumni and students lacked a dedicated, verified platform for structured career mentorship and real-time networking.',
-      'Tight delivery timelines required high sprint velocity without sacrificing backend scalability or chat security.',
-      'Needed seamless alignment between stakeholder feature requests and engineering sprint execution.'
+      'Students and alumni lacked a warm, trusted digital space for authentic career guidance and mentorship.',
+      'Needed a clean, reliable chat experience that made reaching out to mentors feel natural and approachable.'
     ],
     solutionPillars: [
-      { name: 'End-to-End Product Ownership', desc: 'Translated stakeholder goals into prioritized backlogs, sprint plans, and measurable release KPIs.' },
-      { name: 'GenAI-Accelerated Backend Services', desc: 'Leveraged ChatGPT workflows to rapidly architect, test, and scale backend API services.' },
-      { name: 'Secure Real-Time Chat System', desc: 'Built low-latency, authenticated messaging channels connecting students and alumni mentors.' },
-      { name: '100% KPI Attainment', desc: 'Delivered every scoped feature requirement on schedule with full stakeholder sign-off.' }
+      { name: 'Empathy-First User Journeys', desc: 'Designed onboarding flows specifically tailored to reduce hesitation for students seeking career advice.' },
+      { name: 'Secure Mentorship Chat', desc: 'Built safe, direct messaging channels to foster real human connections.' },
+      { name: 'Goal-Driven Execution', desc: 'Maintained clear milestone tracking from initial concept to live release at presentsir.com.' }
     ],
     gtmStrategy: {
-      headline: 'Agile Sprint Governance & Full-Stack Execution',
+      headline: 'Building Products That Serve People First',
       channels: [
-        { channel: 'Stakeholder Alignment & Discovery', detail: 'Defined user journeys and acceptance criteria across student and alumni personas.' },
-        { channel: 'Iterative Sprint Releases', detail: 'Combined PM roadmap tracking with hands-on lead development to eliminate handoff bottlenecks.' }
+        { channel: 'Community Discovery', detail: 'Gathered feedback from students to understand what makes mentorship approachable.' },
+        { channel: 'Iterative Improvement', detail: 'Refined features based on real user interactions and encouragement.' }
       ],
-      metrics: 'Achieved 100% KPI attainment across all feature requirements and launched live at presentsir.com.'
+      metrics: 'Successfully launched live at presentsir.com with 100% goal attainment.'
     },
     financials: {
-      headers: ['Phase', 'Deliverable', 'Methodology', 'Outcome'],
+      headers: ['Stage', 'Focus Area', 'Approach', 'Outcome'],
       rows: [
-        ['1. Discovery & Planning', 'Product Backlog & Sprint Plan', 'Agile / Scrum user story mapping', 'Full stakeholder alignment'],
-        ['2. Backend Engineering', 'Scalable Microservices & APIs', 'GenAI-assisted service development', 'Accelerated sprint velocity'],
-        ['3. Core Feature Build', 'Real-Time Secure Chat', 'Authenticated messaging architecture', '100% KPI attainment'],
-        ['4. Production Launch', 'Live Web Application', 'End-to-end QA & release governance', 'Live at presentsir.com']
+        ['1. Discovery', 'Student Needs', 'Listening sessions & user mapping', 'Deep user empathy'],
+        ['2. Design', 'Mentorship Flow', 'Wireframing & prototyping', 'Intuitive navigation'],
+        ['3. Build', 'Secure Messaging', 'Reliable chat architecture', 'Smooth communication'],
+        ['4. Launch', 'Public Release', 'Community rollout', 'Live at presentsir.com']
       ],
-      note: 'Showcases dual capability as a Product Manager and Lead Developer.'
+      note: 'Showcases a passion for building software that brings people together.'
     },
     takeaways: [
-      'Bridged product strategy and engineering execution as dual PM and Lead Developer.',
-      'Used GenAI workflows to accelerate backend service delivery while maintaining strict security standards.',
-      'Hit 100% of feature KPIs from ideation to production launch.'
+      'Great products begin with a genuine desire to serve the people using them.',
+      'Listening closely to users ensures features solve real human problems.'
     ]
   },
   {
     id: 'medical-nlp',
-    title: 'Clinical NLP: Automated Medical Note De-Identification',
-    subtitle: 'BERT-Based Protected Health Information (PHI) Detection & Compliance MLOps Pipeline',
-    category: 'Technical & AI Builds',
+    title: 'Clinical NLP: Protecting Patient Privacy with Care',
+    subtitle: 'Automated Medical Note De-Identification to Support Safe Healthcare Research',
+    category: 'AI & Data Ethics',
     date: '2025',
-    organization: 'Healthcare AI & Privacy Compliance',
-    role: 'AI Product & MLOps Engineer',
+    organization: 'Healthcare AI & Privacy',
+    role: 'AI Product & ML Engineer',
     heroStats: [
-      { label: 'PHI Detection Accuracy', value: '99.0%' },
-      { label: 'Compliance Audit Reduction', value: '-60% Manual Effort' },
-      { label: 'Model Architecture', value: 'BERT NLP + MLOps' },
-      { label: 'Regulatory Domain', value: 'Clinical Data Privacy' }
+      { label: 'Privacy Accuracy', value: '99.0%' },
+      { label: 'Audit Reduction', value: '-60% Manual Work' },
+      { label: 'Technology', value: 'BERT NLP Models' },
+      { label: 'Impact', value: 'Patient Data Safety' }
     ],
     summary:
-      'Developed a BERT-based Natural Language Processing (NLP) solution and MLOps pipeline for automated Protected Health Information (PHI) detection, achieving 99% accuracy in de-identifying clinical notes and reducing manual data privacy compliance audits by 60%.',
+      'Developed a BERT-based Natural Language Processing solution to protect patient privacy by automatically redacting sensitive identifiers from clinical notes. This tool achieved 99% accuracy while lightening the administrative load on privacy compliance teams by 60%.',
     problem: [
-      'Unstructured clinical notes contain sensitive patient identifiers that must be redacted before research or AI use.',
-      'Manual privacy compliance audits are slow, expensive, and bottleneck clinical data availability.',
-      'Static rule-based redaction misses nuanced contextual PHI entities.'
+      'Medical notes contain sensitive personal details that must be carefully protected before research use.',
+      'Manual chart review is exhausting and slows down medical research that could help patients.'
     ],
     solutionPillars: [
-      { name: 'BERT Token Classification', desc: 'Fine-tuned bidirectional transformer models to identify contextual PHI entities with 99% accuracy.' },
-      { name: 'Automated MLOps Pipeline', desc: 'Built end-to-end ingestion, inference, redaction, and logging workflows for clinical text.' },
-      { name: '60% Audit Workload Reduction', desc: 'Automated high-confidence redactions so compliance teams only review flagged edge cases.' }
+      { name: 'Context-Aware AI Models', desc: 'Trained advanced transformer models to understand medical context and protect privacy with 99% accuracy.' },
+      { name: 'Supporting Compliance Teams', desc: 'Automated tedious redactions so human reviewers can focus on edge cases, reducing manual work by 60%.' }
     ],
     gtmStrategy: {
-      headline: 'Automated Privacy Governance for Healthcare Datasets',
+      headline: 'Ethical AI Protecting Human Dignity',
       channels: [
-        { channel: 'MLOps Pipeline Integration', detail: 'Standardized clinical text preprocessing and automated entity masking.' },
-        { channel: 'Compliance Audit Optimization', detail: 'Cut manual audit cycles by 60% while maintaining 99% PHI recall.' }
+        { channel: 'Privacy-First Design', detail: 'Built with patient data protection as the absolute top priority.' },
+        { channel: 'Workflow Integration', detail: 'Designed to fit seamlessly into hospital data pipelines.' }
       ],
-      metrics: '99% accuracy in clinical note de-identification and 60% reduction in manual compliance audit time.'
+      metrics: '99% privacy detection accuracy and 60% reduction in manual review hours.'
     },
     financials: {
-      headers: ['Metric', 'Manual / Legacy Baseline', 'BERT MLOps Solution', 'Impact'],
+      headers: ['Aspect', 'Traditional Review', 'AI-Assisted Privacy Tool', 'Human Benefit'],
       rows: [
-        ['De-identification Accuracy', 'Prone to human fatigue & regex misses', '99.0% Automated Accuracy', 'High-trust privacy compliance'],
-        ['Manual Audit Effort', '100% manual review required', '-60% Audit Time Reduction', 'Faster clinical research turnaround'],
-        ['Deployment Architecture', 'Ad-hoc scripts', 'Repeatable MLOps Pipeline', 'Scalable across clinical datasets']
+        ['Accuracy', 'Prone to human fatigue', '99.0% Precision', 'Reliable patient privacy'],
+        ['Workload', '100% manual chart reading', '-60% Review Time', 'Freed up administrative staff'],
+        ['Research', 'Slow data sharing', 'Fast & secure processing', 'Accelerated medical insights']
       ],
-      note: 'Demonstrates applied NLP product engineering in a regulated domain.'
+      note: 'Highlights the intersection of ethical responsibility and technical engineering.'
     },
     takeaways: [
-      'Applied contextual BERT NLP to solve a critical healthcare data compliance bottleneck.',
-      'Reduced manual privacy audit overhead by 60% while achieving 99% detection accuracy.'
+      'Technology in healthcare carries a sacred responsibility to protect human privacy and dignity.',
+      'Automating repetitive tasks frees people to focus on meaningful, higher-level care.'
     ]
   },
   {
     id: 'eeg-ml',
-    title: 'Neurological Biometrics: EEG Cognitive State Classification',
-    subtitle: 'End-to-End Machine Learning Pipeline for Decoding Cognitive States from Biometric Signals',
+    title: 'Neurological Biometrics: Decoding Brainwave Signals',
+    subtitle: 'Using Machine Learning to Understand Cognitive Focus and Human States',
     category: 'Technical & AI Builds',
     date: '2024',
-    organization: 'Biomedical Data Science & ML',
+    organization: 'Biomedical Data Science',
     role: 'Machine Learning Engineer',
     liveUrl: 'https://www.kaggle.com/code/nitinvedanand/eeg-confusion-prediction-full-eda-ml/edit',
     heroStats: [
       { label: 'Classification Accuracy', value: '98.0%' },
-      { label: 'Tech Stack', value: 'Python / TensorFlow' },
-      { label: 'ML Library', value: 'Scikit-Learn + EDA' },
-      { label: 'Codebase', value: 'Published on Kaggle' }
+      { label: 'Tools', value: 'Python & TensorFlow' },
+      { label: 'Analysis', value: 'Signal Processing' },
+      { label: 'Platform', value: 'Published on Kaggle' }
     ],
     summary:
-      'Engineered an end-to-end machine learning pipeline using Python, TensorFlow, and Scikit-learn to process raw neurological EEG datasets, achieving 98% classification accuracy in decoding cognitive states from biometric signals.',
+      'Engineered a machine learning pipeline using Python, TensorFlow, and Scikit-learn to analyze complex neurological EEG time-series data, achieving 98% accuracy in interpreting cognitive states from biometric signals.',
     problem: [
-      'Raw neurological EEG streams are high-dimensional and noisy, making cognitive state decoding challenging.',
-      'Requires rigorous exploratory data analysis (EDA), signal normalization, and model benchmarking to avoid overfitting.'
+      'Brainwave signals are extremely noisy and difficult to interpret without rigorous data cleaning and analysis.',
+      'Needed reliable pattern recognition to distinguish between different states of cognitive focus.'
     ],
     solutionPillars: [
-      { name: 'Signal Processing & Full EDA', desc: 'Cleaned and analyzed multi-channel biometric time-series data in Python.' },
-      { name: 'Scikit-Learn & TensorFlow Pipeline', desc: 'Trained and benchmarked classical ML classifiers against deep neural network architectures.' },
-      { name: '98% Classification Accuracy', desc: 'Decoded cognitive confusion states from raw neurological signals with 98% accuracy.' }
+      { name: 'Careful Data Exploration', desc: 'Cleaned and structured complex multi-channel sensor data using Python.' },
+      { name: 'High-Accuracy Modeling', desc: 'Built and tested models that achieved 98% accuracy in classifying cognitive states.' }
     ],
     gtmStrategy: {
-      headline: 'Reproducible Biometric ML Engineering',
+      headline: 'Transparent & Reproducible Research',
       channels: [
-        { channel: 'Feature Extraction & EDA', detail: 'Full statistical and spectral signal exploration published on Kaggle.' },
-        { channel: 'Model Validation', detail: 'Cross-validated TensorFlow and Scikit-learn models to verify 98% accuracy.' }
+        { channel: 'Open Sharing', detail: 'Published the complete exploratory data analysis and code openly on Kaggle.' }
       ],
-      metrics: '98% classification accuracy in decoding cognitive states from biometric signals.'
+      metrics: '98% classification accuracy on biometric signal datasets.'
     },
     financials: {
-      headers: ['Stage', 'Stack', 'Task', 'Result'],
+      headers: ['Step', 'Tool', 'Focus', 'Outcome'],
       rows: [
-        ['1. Exploratory Data Analysis', 'Python, Pandas, Matplotlib', 'Biometric signal distribution & noise filtering', 'Clean training features'],
-        ['2. Classical ML', 'Scikit-Learn', 'Feature scaling & baseline classification', 'Strong benchmark validation'],
-        ['3. Deep Learning', 'TensorFlow / Keras', 'Neural network training & evaluation', '98.0% Classification Accuracy']
+        ['Cleaning', 'Python / Pandas', 'Removing signal noise', 'Clean data matrix'],
+        ['Modeling', 'Scikit-Learn', 'Pattern recognition', 'Strong baseline'],
+        ['Validation', 'TensorFlow', 'Deep evaluation', '98.0% Accuracy']
       ],
-      note: 'Interactive notebook and code available on Kaggle.'
+      note: 'Demonstrates deep analytical rigor and curiosity about how the human mind works.'
     },
     takeaways: [
-      'Built an end-to-end Python, TensorFlow, and Scikit-learn pipeline achieving 98% accuracy on complex biometric data.',
-      'Translated raw sensor telemetry into actionable cognitive state classifications.'
+      'Patience and meticulous data preparation turn noisy signals into clear insights.',
+      'Sharing research openly fosters community learning.'
     ]
   },
   {
     id: 'ai-prompting-managers',
-    title: 'AI Powered College Application Assistant ("Inside Alex\'s Brain")',
-    subtitle: 'Experiential Game-Based AI Curriculum, Prompt Architecture Deck & Live Web Simulation',
-    category: 'Technical & AI Builds',
+    title: 'AI Curriculum & "Inside Alex\'s Brain" Simulation',
+    subtitle: 'An Interactive Game Teaching Students and Leaders How to Navigate AI Responsibly',
+    category: 'Product Builds',
     date: '2026',
-    organization: 'AI Curriculum & Live Simulation Portal',
-    role: 'Creator, Curriculum Designer & Developer',
+    organization: 'NC State Educational Project',
+    role: 'Creator & Developer',
     liveUrl: 'https://ncsu-camp.onrender.com/',
     heroStats: [
-      { label: 'Core Paradigm', value: 'Context Engineering' },
-      { label: 'Simulation Format', value: '6 Teams / 8 Rounds' },
-      { label: 'Decision Window', value: '1-Min Debate / Turn' },
-      { label: 'Live Web App', value: 'ncsu-camp.onrender.com' }
+      { label: 'Format', value: 'Interactive Game' },
+      { label: 'Focus', value: 'Wisdom & Ethics in AI' },
+      { label: 'Teamwork', value: '6 Teams / 8 Rounds' },
+      { label: 'Live Link', value: 'ncsu-camp.onrender.com' }
     ],
     summary:
-      'Created and coded an experiential, game-based AI curriculum, slide deck, and live web simulation (ncsu-camp.onrender.com) demonstrating real-world AI management trade-offs, probabilistic system governance, and prompt architecture.',
+      'Created an experiential, game-based AI curriculum and live web simulation (ncsu-camp.onrender.com) designed to teach students and leaders how to guide AI tools wisely while maintaining their authentic human voice and values.',
     problem: [
-      'The Hallucination Trap: Treating LLMs like deterministic search engines rather than probabilistic next-token predictors.',
-      'The "Sanitized" Profile & Cliché Defaulting: Allowing unconstrained AI to write personal statements results in generic buzzwords ("synergy," "delve," "perseverance").',
-      'Delegation Ambiguity: Knowing what operational tasks to delegate to AI vs. what strategic vision and QA to keep human.'
+      'People often rely blindly on AI or lose their unique personal voice to generic machine phrasing.',
+      'Leaders need engaging ways to understand the balance between technological leverage and human wisdom.'
     ],
     solutionPillars: [
-      { name: 'The Delegation Blueprint (Delegate vs. Keep)', desc: 'Delegate data processing, scaffolding, and style refinement; Keep strategic vision, team leadership, and strict hallucination QA.' },
-      { name: '3-Part Prompt Architecture', desc: '1. Persona ("Act as a critical editor..."), 2. Context & Goal, and 3. Strict Boundaries ("Limit to 3 sentences max").' },
-      { name: 'Advanced Prompting Techniques', desc: 'Few-Shot Prompting (2–3 ideal output examples) and Chain-of-Thought (step-by-step logical reasoning).' },
-      { name: '"Inside Alex\'s Brain": Live 4-Role Game', desc: '6 teams, 1 laptop each, 8 total prompts, and 1-minute debates balancing 4 live metrics: The Brain, The Heart, The Voice, and The Reality Check.' }
+      { name: 'Human Voice & Authenticity', desc: 'Taught participants how to prevent AI from flattening their genuine personal story.' },
+      { name: 'Collaborative Simulation', desc: 'Built a multi-team game where players balance growth, stress, and integrity across 8 rounds.' }
     ],
     gtmStrategy: {
-      headline: 'Live Multi-Team Simulation at ncsu-camp.onrender.com',
+      headline: 'Teaching Responsible Technology Use',
       channels: [
-        { channel: 'Constraint-Driven Team Decisions', detail: '6 teams with 1 laptop each debate metrics for 1 minute before submitting 1 prompt per round across 8 rounds.' },
-        { channel: 'Real-Time AI Metric Scoring', detail: 'AI evaluates every strategic move across Academic Power, Passion, Authenticity, and Stress/Budget.' }
+        { channel: 'Interactive Workshops', detail: 'Engaged students in hands-on decision-making simulations.' }
       ],
       metrics: 'Deployed live at https://ncsu-camp.onrender.com/.'
     },
     financials: {
-      headers: ['Simulation Role', 'Metric Tracked', 'Domain Controlled', 'Risk if Neglected'],
+      headers: ['Game Role', 'Metric', 'Focus Area', 'Life Lesson'],
       rows: [
-        ['The Brain', 'Academic Power', 'Test strategy & GPA', 'Loses analytical competitiveness'],
-        ['The Heart', 'Passion', 'Extracurriculars & summers', 'Uninspired, flat narrative'],
-        ['The Voice', 'Authenticity', 'Shapes essays & cuts clichés', 'Falls into the "Sanitized Profile" trap'],
-        ['The Reality Check', 'Stress & Budget', 'Manages costs & deadlines', 'Burnout or budget exhaustion before Round 8']
+        ['The Brain', 'Academic Power', 'Wisdom & learning', 'Growth requires patience'],
+        ['The Heart', 'Passion', 'Purpose & calling', 'Never lose your drive'],
+        ['The Voice', 'Authenticity', 'True personal voice', 'Stay true to who you are'],
+        ['The Check', 'Stress & Budget', 'Rest & stewardship', 'Balance work with well-being']
       ],
-      note: 'Combines instructional design, AI product management, and full-stack web simulation development.'
+      note: 'Reflects a commitment to empowering others to use technology wisely.'
     },
     takeaways: [
-      'Created and coded an end-to-end interactive simulation game teaching AI trade-offs and prompt engineering.',
-      'Structured the 3-pillar Prompt Architecture and Delegation Blueprint for managing probabilistic systems.'
+      'Technology should amplify human creativity, not replace authentic character.',
+      'Gamified learning helps people grasp complex ethical choices quickly.'
     ]
   },
   {
     id: 'openai-smb',
-    title: 'OpenAI: ChatGPT Business — "The Missing Middle"',
-    subtitle: 'Product Architecture, Pricing & Embedded GTM Blueprint for the $47B US SMB Market',
-    category: 'Product & GTM Strategy',
+    title: 'OpenAI: ChatGPT Business — Empowering Small Businesses',
+    subtitle: 'A Product Strategy Blueprint to Return 20+ Hours Weekly to Business Owners',
+    category: 'Product Strategy',
     date: 'April 2026',
-    organization: 'OpenAI Strategic Growth Initiative',
-    role: 'Product Strategy, GTM & 3-Year Financial Modeling',
+    organization: 'Strategic Growth Initiative',
+    role: 'Product Strategy & Modeling Lead',
     heroStats: [
-      { label: 'US SMB TAM', value: '$47B (33.2M SMBs)' },
-      { label: 'Flat-Rate Pricing', value: '$79 / month' },
-      { label: '3-Year Revenue', value: '$1.21B' },
-      { label: '3-Year Op. Profit', value: '$648M (115% ROI)' }
+      { label: 'Market Need', value: '33.2M SMBs' },
+      { label: 'Proposed Price', value: '$79 / month' },
+      { label: 'Projected Value', value: '17–25 hrs saved/wk' },
+      { label: 'Vision', value: '$1.21B Impact' }
     ],
     summary:
-      'While OpenAI saturated the consumer market and scaled into the Fortune 500, 33.2 million US SMBs remained trapped in "The Missing Middle"—forced to hacksaw individual $20 Plus plans or struggle with IT-heavy Team/Enterprise tiers. Designed ChatGPT Business ($79/mo flat rate) paired with an embedded platform distribution engine targeting a 5M SAM to capture 587K–650K accounts by Year 3.',
+      'Developed a product strategy to support the 33.2 million small businesses in America who are stretched thin wearing 6–8 hats. By designing ChatGPT Business as an embedded bandwidth solution, this initiative aims to return up to 25 hours a week back to hardworking business owners.',
     problem: [
-      'Enterprise tier ($60–$100/user) suffers from 6-month sales cycles; Government faces 18–36 month procurement drag.',
-      'Individual tier ($20/mo) suffers from high churn and zero team collaboration or admin controls.',
-      'SMBs wear 6–8 hats simultaneously: they have a bandwidth problem, not an AI problem. 78% of owners will pay for AI if it saves at least 5 hours/week.'
+      'Small business owners are overwhelmed by administrative burdens, marketing, and operations with little breathing room.',
+      'Existing AI tools are either too basic or too complex for daily small business workflows.'
     ],
     solutionPillars: [
-      { name: 'Business Memory', desc: 'Automatically maintains persistent context on brand voice, business tax IDs, and recurring project history.' },
-      { name: 'SMB Template Library', desc: 'Pre-configured turnkey workflows for local SEO, payroll summaries, contract review, and inventory alerts.' },
-      { name: 'Native 1-Click Integrations', desc: 'Seamless synchronization with Shopify, Intuit QuickBooks, and HubSpot dashboards.' },
-      { name: 'Shared Team Workspace', desc: 'Collaborative departmental environment without complex IT permission hierarchies.' },
-      { name: '5-Minute Guided Onboarding', desc: 'Zero prompt-engineering required; built specifically for time-poor non-technical operators.' }
+      { name: 'Bandwidth Recovery', desc: 'Focused the product on giving back 17–25 hours weekly to owners so they can care for their families and communities.' },
+      { name: 'Embedded Simplicity', desc: 'Integrated seamlessly into tools small businesses already trust (Shopify, QuickBooks, HubSpot).' }
     ],
     gtmStrategy: {
-      headline: '"Don\'t Sell to SMBs. Embed in the Tools They Trust."',
+      headline: 'Serving the People Who Power Local Communities',
       channels: [
-        { channel: 'Platform Embed Partnerships (40% Acq.)', detail: 'Native integration inside Shopify, Intuit & HubSpot. $95 CAC. $8M/yr budget + 15% rev-share for first 6 months.' },
-        { channel: 'Trusted Advisor Network (30% Acq.)', detail: 'Partnering with 10,000 accountants & SMB consultants as tech gatekeepers ($200 MDF each; $5M/yr budget).' },
-        { channel: 'Performance Marketing (30% Acq.)', detail: '$4M/yr B2B SaaS search + $2M/yr targeted LinkedIn campaigns focused on workflow automation.' }
+        { channel: 'Trusted Advisors', detail: 'Partnering with local accountants and advisors who support small business owners.' }
       ],
-      metrics: 'Blended 3-Year CAC stabilizes at $145/account. Workflow-embedded ROI reporting drives 85% annual retention (vs. 72% SMB SaaS average).'
+      metrics: 'Designed to return 20+ hours weekly to hardworking entrepreneurs.'
     },
     financials: {
-      headers: ['Metric', 'Year 1', 'Year 2', 'Year 3', '3-Yr Consolidated'],
+      headers: ['Impact Area', 'Before AI', 'With Business Copilot', 'Human Benefit'],
       rows: [
-        ['Active Accounts', '75,000', '251,000', '587,000', '13% SAM Penetration'],
-        ['Gross Revenue', '$85.5M', '$316.0M', '$810.0M', '$1.21 Billion'],
-        ['Operating Profit', '$31.8M', '$161.0M', '$455.0M', '$648.0 Million'],
-        ['Operating Margin', '37%', '51%', '56%', '115% Total ROI']
+        ['Owner Time', 'Drowned in admin', '17–25 hours saved weekly', 'Quality time for family & rest'],
+        ['Pricing', 'Expensive custom tools', '$79/mo flat rate', 'Accessible for local shops'],
+        ['Retention', 'Complex SaaS churn', '85% embedded retention', 'Long-term trusted partnership']
       ],
-      note: 'Stress-tested against a 50% lower growth Floor Scenario, still generating $298M in operating profit. Weekly SMB time savings of 17–25 hrs at $50/hr blended labor delivers $3,400–$5,000/mo in value against a $79/mo price.'
+      note: 'Rooted in a desire to lift burdens off hardworking people.'
     },
     takeaways: [
-      'Solved the SMB CAC:LTV trap by shifting from outbound sales to embedded distribution inside Shopify, Intuit, and HubSpot.',
-      'Quantified persona-level bandwidth recovery (17–25 hrs/week) to anchor $79/mo flat pricing.',
-      'Modeled a $1.21B 3-year revenue build with 56% Year 3 operating margins.'
+      'The best products solve real human exhaustion and give people their time back.',
+      'Empowering small businesses strengthens entire local communities.'
     ]
   },
   {
     id: 'nvidia-rubin',
-    title: 'NVIDIA Rubin Platform: "Control Over Scale"',
-    subtitle: 'Three-Year Sovereign AI Infrastructure, Allocation & Pricing Strategy',
-    category: 'Product & GTM Strategy',
+    title: 'NVIDIA Rubin Platform: Long-Term Infrastructure Strategy',
+    subtitle: 'Evaluating Global Scale, Sovereign Partnerships, and Long-Term Vision',
+    category: 'Product Strategy',
     date: 'Spring 2026',
-    organization: 'NVIDIA Strategic Case Study',
-    role: 'Platform Strategy, Pricing & Ecosystem Moats',
+    organization: 'Strategic Case Study',
+    role: 'Platform Strategy & Ecosystem Analyst',
     heroStats: [
-      { label: 'Architecture', value: '7-Chip AI Factory' },
-      { label: 'Yr 1 Sovereign Target', value: '$30B → $50B+' },
-      { label: 'Customer ROI', value: '$5B Rev / $100M Spent' },
-      { label: 'Efficiency Gain', value: '10x Lower Cost/Token' }
+      { label: 'Scope', value: '7-Chip Architecture' },
+      { label: 'Focus', value: 'Sovereign Partnerships' },
+      { label: 'Timeline', value: '3-Year Vision' },
+      { label: 'Foundation', value: 'Ecosystem Trust' }
     ],
     summary:
-      'Rubin is not a GPU generation—it is a 7-chip integrated data center architecture (Vera Rubin GPU, Vera CPU, ConnectX-9 SuperNIC, Spectrum-6 Ethernet, NVLink 6 Switch, BlueField-4 DPU, Groq 3 LPX in NVL72/NVL144 racks). Formulated a "Control Over Scale" strategy: prioritizing Sovereign Nations and Frontier Labs in Year 1 while intentionally excluding Hyperscalers from direct hardware ownership to cement a 10-year ecosystem lock-in.',
+      'Examined the launch strategy for NVIDIA’s Rubin platform, shifting the perspective from simple hardware specifications to a 10-year infrastructure commitment. Focused on how deep international partnerships and developer ecosystems build lasting trust.',
     problem: [
-      'The Hyperscaler Paradox: AWS (Trainium), Google (TPU v7), and Microsoft (Maia) are NVIDIA\'s largest buyers AND its most dangerous custom-silicon competitors.',
-      'The Blackwell Cannibalization Problem: Premature public launch announcements risk freezing near-term Blackwell orders.',
-      'Product leads reset every 18 months; NVIDIA must transition from a chip vendor to an irreversible national infrastructure layer.'
+      'Treating major technological releases as mere transactional purchases misses their long-term societal and organizational impact.',
+      'Organizations need stable, secure technological foundations to build national research capabilities.'
     ],
     solutionPillars: [
-      { name: 'Layer 1: Rack-Only Sales (NVL72 / NVL144)', desc: 'Sold exclusively as complete $10–$15M rack systems, forcing InfiniBand, NVLink 6, and ConnectX-9 into every transaction.' },
-      { name: 'Layer 2: Opaque Negotiated Pricing', desc: 'No public list price. Price encodes strategic partnership depth and multi-year commitment rather than order volume.' },
-      { name: 'Layer 3: Sovereign-Tier Diplomacy', desc: 'US treaty allies (UK £11B, Japan, UAE, France, India $1.25B, S. Korea 250K+ GPUs) receive preferential pricing tied to joint AI factory agreements.' },
-      { name: 'Layer 4: Mandatory 3-Yr Platform Bundle', desc: 'Every rack requires a 3-year AI Enterprise software subscription, InfiniBand support, and CUDA access tier.' },
-      { name: '18-Month Invisible Dependency Chain', desc: 'Progresses from hardware setup (Mo 1-3) → CUDA codebase optimization (Mo 4-9) → InfiniBand standardization (Mo 10-15) → full organizational lock-in (Mo 16-24+).' }
+      { name: 'Relational Investment', desc: 'Prioritizing long-term collaborative alliances over short-term sales volume.' },
+      { name: 'Ecosystem Dedication', desc: 'Supporting millions of developers with reliable tools and shared knowledge.' }
     ],
     gtmStrategy: {
-      headline: '"Reveal, Not Launch" — 36-Month Phased Rollout',
+      headline: 'Building Trust Through Long-Term Commitment',
       channels: [
-        { channel: 'Year 1: Entrench (H2 2026 – H2 2027)', detail: 'Direct-only sales to 8–10 Sovereign Nations & Frontier Labs (OpenAI, Anthropic 1GW commitment, xAI, Mistral). OEM channel stays on Blackwell.' },
-        { channel: 'Year 2: Expand (H2 2027 – H2 2028)', detail: 'Hyperscalers granted Rubin capacity via DGX Cloud only (no hardware ownership). Dell, HPE, Lenovo cleared for enterprise OEM racks. Target: $10B+ AI Enterprise ARR.' },
-        { channel: 'Year 3: Lock (H2 2028 – H2 2029)', detail: 'Year 1 partners hit Month 24–36 renewal default. Sovereign AI Factories operated as JVs in 6+ nations. Software revenue crosses hardware revenue.' }
+        { channel: 'Global Alliances', detail: 'Partnering closely with sovereign nations to build secure infrastructure.' }
       ],
-      metrics: 'Built on 3 compounding moats: Software Gravity (18 yrs CUDA, 6M developers), Sovereign Entanglement (political switching cost), and Capital Barrier ($50B–$100B to replicate).'
+      metrics: 'Long-term collaborative framework spanning 3+ years.'
     },
     financials: {
-      headers: ['Strategic Phase', 'Primary Allocation', 'Channel Model', 'Key Financial Milestone'],
+      headers: ['Strategic Pillar', 'Transactional View', 'Relational View', 'Human Impact'],
       rows: [
-        ['Year 1: Entrench', 'Sovereigns & Frontier Labs', '100% Direct + 3-Yr Bundle', 'Sovereign AI Revenue: $30B → $50B+'],
-        ['Year 2: Expand', 'DGX Cloud + Enterprise OEMs', 'Direct + Dell/HPE/Lenovo', 'AI Enterprise ARR Surpasses $10B+'],
-        ['Year 3: Lock', 'Global Renewals & Sovereign JVs', 'Full Ecosystem Lock-in', 'Software Revenue > Hardware Revenue'],
-        ['Unit Economics', 'NVL144 Rack ($10M–$15M)', '10x Lower Cost/Token vs Blackwell', '$5B Token Revenue per $100M Invested']
+        ['Purchasing', 'One-time sale', 'Decade-long partnership', 'Shared stability'],
+        ['Allocation', 'Highest bidder', 'Strategic alliance', 'Global cooperation'],
+        ['Ecosystem', 'Isolated chips', 'Connected community', 'Collaborative progress']
       ],
-      note: 'Sacrifices short-term Year 1 hyperscaler volume to prevent custom silicon acceleration and establish a 10-year sovereign moat.'
+      note: 'Emphasizes that lasting success is built on trust and reliability.'
     },
     takeaways: [
-      'Reframed unit of analysis from GPU FLOPS to the full 7-chip data center and its 24-month switching cost.',
-      'Distinguished between customer resentment and switching: AMD MI350 can compete on silicon price, not on 6M CUDA developers.',
-      'Sequenced channels (Direct → DGX Cloud/OEM → Sovereign JV) to protect Blackwell demand.'
+      'True leadership looks years ahead and invests in genuine partnerships.',
+      'Technology serves humanity best when built on a foundation of stability and trust.'
     ]
   },
   {
     id: 'caterpillar-taas',
-    title: 'Caterpillar Inc.: Throughput-as-a-Service (TaaS)',
-    subtitle: 'Transforming Autonomous Haulage Systems (Cat 793/797) into High-Margin Recurring Revenue',
-    category: 'Systems, PLM & Supply Chain',
+    title: 'Caterpillar Inc.: Partnering for Operational Uptime',
+    subtitle: 'Transforming Heavy Machinery Support into an Outcome-Based Partnership Model',
+    category: 'Systems & Operations',
     date: 'April 2026',
-    organization: 'Caterpillar Strategic Blueprint',
-    role: 'Service Architecture, IoT/MLOps & Corporate Finance',
+    organization: 'Strategic Blueprint',
+    role: 'Service Architecture & Finance Analyst',
     heroStats: [
-      { label: 'Cost of Mine Downtime', value: '$50K / hr / truck' },
-      { label: 'Fleet ARR (50 Trucks)', value: '$80M / year' },
-      { label: 'Mine Operator ROI', value: '4x ($150M Recovered)' },
-      { label: 'Asset LTV Expansion', value: '$3.5M → $10M+' }
+      { label: 'Downtime Cost', value: '$50K / hour' },
+      { label: 'Support Model', value: 'Predictive Care' },
+      { label: 'Uptime Goal', value: '95%+ Reliability' },
+      { label: 'Partnership', value: 'Aligned Incentives' }
     ],
     summary:
-      'In Tier-1 mines operating 8,760 hours/year, a 600-ton autonomous Cat 793 generates 4TB of telemetry/day and requires <20ms latency. While autonomy boosts utilization by 15–20%, invisible digital glitches cause instant safety stops—and a 5-hour physical technician dispatch burns $250,000 in lost ore revenue. Architected a "Hub & Spoke" service model and a Throughput-as-a-Service (TaaS) business model that triples asset LTV and aligns dealer incentives with 95%+ uptime.',
+      'Explored how Caterpillar can transition from traditional equipment sales to a supportive, outcome-based partnership model. By using predictive maintenance to prevent costly downtime, this model aligns Caterpillar’s success directly with the productivity and peace of mind of mine operators.',
     problem: [
-      'Zero-Slack Ecosystem: A single idle Cat 793 costs $50,000/hour in lost mine revenue ($2.5M/hour across a 50-truck fleet). Customers buy an earth-moving SLA, not iron.',
-      'The Reaction Gap: Physical dispatches take 4–6 hours ($200K–$300K lost before a laptop is connected) for software faults patchable remotely in 5 minutes.',
-      'Misaligned Dealer Incentives: Legacy dealers make 30% margin on replacement parts and labor—profiting most when the customer\'s machine fails.'
+      'Unexpected equipment breakdowns cause massive stress and financial loss for mine operators ($50K/hour in idle costs).',
+      'Traditional repair models only make money when things break down, creating a misaligned incentive.'
     ],
     solutionPillars: [
-      { name: 'The Digital Hub (Cat HQ & Remote NOCs)', desc: 'Powered by Helios AI. Resolves 60% of autonomous fault codes remotely via OTA patches within 5 minutes, saving $250K per incident.' },
-      { name: 'The Predictive Spoke (Local Dealers)', desc: '$25M co-investment to upskill mechanics into certified "Systems Integrators" executing predictive maintenance during scheduled downtime.' },
-      { name: 'Throughput-as-a-Service (TaaS) Pricing', desc: '$600K/yr Base Uptime SLA + $0.20/ton moved Performance Premium (~5M tons/yr = $1M) = $1.6M ARR per truck ($80M ARR per 50-truck fleet).' },
-      { name: 'Corporate Finance: "Swallowing the Fish"', desc: 'Cat Financial buys trucks from Cat Manufacturing at $4.5M build cost and leases capacity as OpEx, breaking even in 3.5–4 years and expanding LTV from $3.5M to $10M+.' },
-      { name: 'Dealer as SLA Co-Signer', desc: 'Dealers receive a share of the $600K base and $0.20/ton bonus, but pay for unscheduled failure parts out of pocket—profiting exclusively from uptime.' }
+      { name: 'Predictive Care', desc: 'Using smart telemetry to spot potential issues weeks in advance, preventing stressful emergency breakdowns.' },
+      { name: 'Aligned Success', desc: 'Restructuring agreements so service providers succeed only when the customer experiences flawless uptime.' }
     ],
     gtmStrategy: {
-      headline: 'Phased Implementation Roadmap (2026–2030+)',
+      headline: 'From Repairing Breakdowns to Ensuring Peace of Mind',
       channels: [
-        { channel: 'Phase 1: Foundation & Upskilling (2026–2027)', detail: 'Roll out Helios platform across active AHS fleets, launch $25M Systems Integrator certification, and introduce Uptime Guarantees.' },
-        { channel: 'Phase 2: Ring-Fenced TaaS Pilots (2028–2029)', detail: 'Execute zero-CapEx pure TaaS contracts at greenfield mining sites; validate 4-year cash-flow crossover via Cat Financial.' },
-        { channel: 'Phase 3: Broad Commercialization (2030+)', detail: 'TaaS becomes default for ultra-class fleets; mega-dealers (WesTrac, Finning) co-finance fleets; expand to auxiliary equipment.' }
+        { channel: 'Global Dealer Network', detail: 'Empowering local technicians with proactive AI tools to better serve clients.' }
       ],
-      metrics: 'Pushes fleet availability from 85% to 95% (+1,000 operating hrs/yr, -30% downtime), unlocking $150M in recovered top-line revenue across a 50-truck fleet (4x Customer ROI).'
+      metrics: 'Pushes fleet availability from 85% to 95% with proactive care.'
     },
     financials: {
-      headers: ['Unit Economics Component (Per Truck / Yr)', 'Traditional Model', 'TaaS Blueprint', 'Strategic Impact'],
+      headers: ['Service Approach', 'Traditional Reactive', 'Proactive Partnership', 'Benefit'],
       rows: [
-        ['Internal Cost to Serve', 'Reactive / Variable', '$570,000 / yr', '$50K HW + $200K Labor + $20K Cloud + $300K Parts'],
-        ['Base Subscription (Uptime SLA)', 'Transactional CapEx', '$600,000 / yr', 'Covers NOC, Helios AI & preventive maintenance'],
-        ['Performance Premium ($0.20/ton)', '$0', '$1,000,000 / yr', 'Based on 5M tons moved annually per truck'],
-        ['Total Annual Revenue / Truck', '$300K – $700K', '$1.60 Million ARR', '10-Yr Asset LTV expands from $3.5M to $10M+']
+        ['Incentive', 'Profits when things break', 'Profits when things run smoothly', 'Shared success'],
+        ['Stress Level', 'Emergency technician dispatches', 'Scheduled preventive care', 'Peace of mind'],
+        ['Reliability', '85% uptime average', '95%+ uptime guarantee', 'Maximized productivity']
       ],
-      note: 'Moves the $6M truck off the mine operator\'s balance sheet (CapEx to OpEx) while tripling lifetime asset value.'
+      note: 'Demonstrates how aligning incentives creates a win-win for everyone involved.'
     },
     takeaways: [
-      'Diagnosed how cyber-physical autonomy shifts failure modes from mechanical wear to sub-20ms network/software stops.',
-      'Realigned 160+ global dealers to profit from predictive uptime rather than reactive part failures.',
-      'Structured "Swallowing the Fish" financing via Cat Financial to bridge the CapEx-to-OpEx transition.'
+      'Preventing problems proactively is always better than scrambling to fix emergencies.',
+      'True partnerships mean sharing the goal of keeping operations running peacefully.'
     ]
   },
   {
     id: 'tesla-cybertruck',
-    title: 'Tesla Cybertruck: Product Lifecycle Management (PLM)',
-    subtitle: 'Critical Analysis of Engineering Tradeoffs, Manufacturing Risk & Market Translation (EM 507)',
-    category: 'Systems, PLM & Supply Chain',
+    title: 'Tesla Cybertruck: Evaluating Design Tradeoffs',
+    subtitle: 'A Product Lifecycle Analysis on Balancing Bold Innovation with Practical Utility',
+    category: 'Systems & Operations',
     date: 'Spring 2026',
-    organization: 'Product Lifecycle Management (EM 507)',
-    role: 'PLM Analysis, Engineering Tradeoffs & Roadmapping',
+    organization: 'Product Lifecycle Case Study',
+    role: 'PLM Analyst & Evaluator',
     heroStats: [
-      { label: '2025 Sales Drop', value: '-48% (20,237 units)' },
-      { label: 'Capacity Utilization', value: '~16% of Target' },
-      { label: 'Safety Recalls', value: '10 Campaigns' },
-      { label: 'Cancelled Contracts', value: '~$3B by 2026' }
+      { label: 'Innovation', value: 'Stainless Exoskeleton' },
+      { label: 'Challenge', value: 'Repair Complexity' },
+      { label: 'Market Response', value: 'Mixed Adoption' },
+      { label: 'Key Lesson', value: 'Customer-Centric Design' }
     ],
     summary:
-      'Announced in 2019 and delivered in late 2023, the Tesla Cybertruck sought to disrupt pickup truck convergence with sports-car performance (<3s 0–60 mph), a 48V architecture, and an unpainted 300-series cold-rolled stainless steel exoskeleton. This PLM analysis examines how optimizing for factory innovation storytelling over mainstream customer utility caused cascading engineering tradeoffs—resulting in a 48% sales drop in 2025, 10 recalls, and $20,000+ minor repair costs.',
+      'Conducted a product lifecycle review of the Tesla Cybertruck, analyzing how bold manufacturing choices (like unpainted stainless steel and air-bending) created striking brand differentiation but also introduced steep repair challenges and customer friction.',
     problem: [
-      'Misaligned Segment Prioritization: Optimized for early adopters and lifestyle buyers while deprioritizing fleet operators and contractors who require conventional bed access and low-cost repairability.',
-      'Price & Schedule Slippage: Delayed 4 years (2019 to late 2023) while launch pricing jumped from <$40,000 to $60,990+.',
-      'Early Adopter Exhaustion: Sales fell 48% from 38,965 units in 2024 to 20,237 units in 2025, compounded by 10 recalls (including 46,000 vehicles for trim delamination and accelerator pedal issues).'
+      'Optimizing entirely for factory innovation and bold aesthetics caused unexpected repair hurdles and high insurance costs for everyday users.',
+      'Needed a balanced evaluation of how engineering choices impact real-world usability.'
     ],
     solutionPillars: [
-      { name: 'Tradeoff 1: Stainless Exoskeleton', desc: 'Eliminated the $400M–$600M paint shop, but mandated flat planar geometry, caused $20,000+ collision repairs, and locked out third-party body shops.' },
-      { name: 'Tradeoff 2: High-Pressure Air-Bending', desc: 'Novel stamping method to bend ultra-hard steel without cracking, but created scaling bottlenecks and ~$3B in cancelled supplier contracts.' },
-      { name: 'Tradeoff 3: 48V Architecture & Steer-by-Wire', desc: 'Industry-first innovations that cut wiring weight and improved turning radius, but added software validation risk.' },
-      { name: 'Recommendation 1: Dual Roadmap Bifurcation', desc: 'Bifurcate into a Radical Stainless Flagship (halo/R&D testbed) and a Pragmatic Aluminum/Steel Variant (<$50K) for fleet and mainstream buyers.' },
-      { name: 'Recommendation 2: Design for Serviceability & Staged Manufacturing', desc: 'Embed modular panels, third-party repair docs, and actuarial insurance modeling from Day 1; pilot novel manufacturing processes with conventional fallbacks.' }
+      { name: 'Honest Tradeoff Analysis', desc: 'Weighing bold design against practical customer needs like repairability and daily utility.' },
+      { name: 'Future Product Roadmap', desc: 'Proposing dual-path strategies that honor both cutting-edge vision and practical customer service.' }
     ],
     gtmStrategy: {
-      headline: 'Engineering Management & PLM Governance Framework',
+      headline: 'Balancing Bold Vision with Practical Care',
       channels: [
-        { channel: 'Launch Phase (2023–2024): Production Hell', detail: 'Simultaneous maturation of air-bending, 48V, and new battery cells caused compounding ramp delays.' },
-        { channel: 'Growth Phase (2024–2025): Adopter Exhaustion', detail: 'Mainstream buyers balked at towing range drops, $60,990+ price, loss of $7,500 tax credit, and rising insurance premiums.' },
-        { channel: 'Maturity Phase (2026+): Service Obsolescence Risk', detail: 'Proprietary repair bottlenecks and actuarial insurance spikes forced a $15K Cyberbeast price cut to $99,990.' }
+        { channel: 'Case Study Review', detail: 'Evaluating manufacturing lessons for future engineering leaders.' }
       ],
-      metrics: 'Key EM Lesson: Separate factory cost optimization (eliminating the paint shop) from end-user value creation (repairability and TCO).'
+      metrics: 'Comprehensive 5-pillar PLM lifecycle evaluation.'
     },
     financials: {
-      headers: ['Design Decision', 'Benefit Realized', 'Lifecycle Cost Incurred', 'Net PLM Assessment'],
+      headers: ['Feature', 'Design Intent', 'Real-World Friction', 'Lesson Learned'],
       rows: [
-        ['Stainless Exoskeleton', 'Eliminated $400–600M paint shop; brand halo', '$20K+ minor repair costs; 46K panel recall; high insurance', 'Positive for niche; negative for mass market'],
-        ['Air-Bending Stamping', 'Shaped ultra-hard 300-series steel without cracking', '4-yr ramp delay; ~$3B cancelled supply contracts', 'High execution risk; negative ROI at low volume'],
-        ['Steer-by-Wire System', 'Tighter turning radius; digital responsiveness', 'Loss of mechanical fallback feel; software validation risk', 'Positive for tech buyers; neutral for fleets'],
-        ['48V Electrical Bus', 'Reduced wiring weight; mobile V2L power export', 'Initial supplier lead-time constraints', 'Strong long-term industry standard']
+        ['Exoskeleton', 'Rugged durability', 'Expensive repairs ($20K+)', 'Factor in total cost of ownership'],
+        ['Aesthetics', 'Distinctive look', 'Polarizing form factor', 'Balance uniqueness with daily utility'],
+        ['Manufacturing', 'Eliminate paint shop', 'Scaling and supply delays', 'De-risk novel production methods']
       ],
-      note: 'Benchmarked against Ford F-150 Lightning, which retained conventional aluminum body panels to reduce adoption friction.'
+      note: 'Teaches engineering humility and the importance of keeping the end-user in mind.'
     },
     takeaways: [
-      'Demonstrated how unbuffered "innovation for innovation\'s sake" across structure and manufacturing creates cascading complexity.',
-      'Formulated a Dual-Roadmap turnaround strategy to capture both halo prestige and sub-$50K commercial fleet volume.',
-      'Built a PLM governance checklist integrating actuarial insurance and repair modeling into initial product requirements.'
+      'Bold innovation is inspiring, but it must never compromise the practical needs of the user.',
+      'Good product management anticipates the full lifecycle of ownership, including repairs and maintenance.'
     ]
   },
   {
     id: 'nexaflow-cascade',
-    title: 'NexaFlow Logistics: The Cascade Interceptor',
-    subtitle: 'Investment Proposal for AI-Native 4-Brain Agentic Supply Chain Orchestration',
-    category: 'Product & GTM Strategy',
+    title: 'NexaFlow Logistics: Autonomous Supply Chain Orchestration',
+    subtitle: 'Designing an Intelligent 4-Brain System to Relieve Operational Stress',
+    category: 'Product Strategy',
     date: '2026',
-    organization: 'NexaFlow Logistics Board Proposal',
-    role: 'AI Product Architecture & Business Case Lead',
+    organization: 'Board Investment Proposal',
+    role: 'AI Product Architecture Lead',
     heroStats: [
-      { label: 'Total Investment Ask', value: '$300,000' },
-      { label: 'ROI Payback Period', value: '8 Days (192 Hrs)' },
-      { label: 'Order Volume Scale', value: '25,000 Orders/Day' },
-      { label: 'Return-to-Resale Cycle', value: '11 Days → 2 Days' }
+      { label: 'Investment Ask', value: '$300,000' },
+      { label: 'Payback Period', value: '8 Days (192 Hours)' },
+      { label: 'Daily Volume', value: '25,000 Orders' },
+      { label: 'Efficiency', value: 'Autonomous Scale' }
     ],
     summary:
-      'At 25,000 orders/day, reactive manual logistics decisions and static "If-Then" rules were eroding NexaFlow\'s margins across forecasting, warehouse throughput, returns, and carrier routing. Pitched and architected "The Cascade Interceptor"—an autonomous 4-Brain agentic system integrating across SAP, WMS, and 6 Carrier APIs that achieves full $300K MVP amortization in 8 days (192 hours).',
+      'Proposed "The Cascade Interceptor"—an intelligent 4-Brain multi-agent system designed to take over chaotic, manual logistics decisions. By automating carrier routing, warehouse flow, and supplier backups, this system relieves frontline stress and pays for itself within 8 days.',
     problem: [
-      'Forecast Leak: Inventory placement decisions operating at 60% accuracy.',
-      'Throughput Deficit: Fulfillment centers operating 30% below board target due to unpredicted congestion.',
-      'Restocking Lag & Carrier Friction: 11-day return-to-resale cycle killing resale value, plus $1.60 lost per order on carrier misassignment.'
+      'Frontline logistics teams were drowning in manual, stressful "firefighting" decisions at 25,000 orders/day.',
+      'Fragmented systems led to costly routing errors and frustrated customers.'
     ],
     solutionPillars: [
-      { name: '1. Carrier Brain (<1s Routing)', desc: 'Assigns optimal shipping carriers in under 1 second, analyzing destinations against historical failure memory to auto-correct rural routing and recover $1.60/order.' },
-      { name: '2. Warehouse Brain (60m Lookahead)', desc: 'Predicts fulfillment congestion 60 minutes out and autonomously orchestrates worker movement and order routing to close the 30% throughput deficit.' },
-      { name: '3. Returns Brain (11d → 2d)', desc: 'Compresses return-to-resale turnaround from 11 days to 2 days by pre-emptively reserving shelf space using return-probability logic.' },
-      { name: '4. Shadow Buyer (Supplier Orchestration)', desc: 'Silently secures backup supplier inventory before formal delay confirmation, bridging upstream supply chain visibility gaps.' }
+      { name: '4-Brain Intelligence', desc: 'Coordinated AI agents handling carrier assignment, warehouse traffic, returns, and backup inventory.' },
+      { name: 'Relieving Human Stress', desc: 'Removing chaotic manual firefighting so human teams can focus on higher-level strategy and care.' }
     ],
     gtmStrategy: {
-      headline: '"We Didn\'t Give NexaFlow a Better Dashboard. We Gave It Eyes."',
+      headline: 'Giving Operational Teams Intelligence and Peace of Mind',
       channels: [
-        { channel: 'System Integration Scope', detail: '6-Month targeted deployment integrating directly with SAP ERP, Warehouse Management Systems (WMS), and 6 major Carrier APIs.' },
-        { channel: 'Proprietary Data Moat', detail: 'Within 12 months, the Interceptor\'s historical failure and routing memory becomes a proprietary operational asset that off-the-shelf SaaS cannot replicate.' }
+        { channel: 'Seamless ERP Integration', detail: 'Connecting smoothly into existing SAP and WMS platforms.' }
       ],
-      metrics: '$300K total capital ask recovers its full investment within 192 hours of live activation at 25,000 daily orders.'
+      metrics: 'Full $300K investment recovered within 192 hours of operation.'
     },
     financials: {
-      headers: ['Operational Failure Node', 'Legacy Baseline', 'Cascade Interceptor Target', 'Financial & Operational Impact'],
+      headers: ['Area', 'Manual Struggle', 'AI Orchestration', 'Benefit'],
       rows: [
-        ['Carrier Misassignment', 'Losing $1.60 / order', '<1s optimal carrier match', 'Up to $40,000/day leakage stopped at 25K orders'],
-        ['Warehouse Throughput', '30% below board target', '60-min predictive rerouting', 'Eliminates fulfillment bottleneck without new CapEx'],
-        ['Return-to-Resale Lag', '11-day processing cycle', '2-day autonomous cycle', '9 days of working capital & resale velocity unlocked'],
-        ['MVP Investment Ask', '$300,000 Total CapEx', '192-Hour (8-Day) Payback', 'Full 4-Brain deployment across SAP, WMS & 6 Carriers']
+        ['Routing', 'Costly mistakes ($1.60/order)', 'Sub-second optimal matching', 'Eliminated financial leakage'],
+        ['Warehouse', 'Congestion & delays', '60-minute lookahead routing', 'Smooth workflow'],
+        ['Stress', 'Constant firefighting', 'Autonomous coordination', 'Calm, empowered teams']
       ],
-      note: 'Transitions operations from passive dashboard reporting to autonomous agentic execution.'
+      note: 'Shows how intelligent automation protects human energy from burnout.'
     },
     takeaways: [
-      'Translated four operational margin leaks into a unified 4-Brain multi-agent product architecture.',
-      'Built an executive board pitch anchored on Daily Recovery Math and an 8-day (192-hour) payback window.'
+      'Automation should relieve human exhaustion, not add complexity.',
+      'Building efficient systems creates calm, productive environments.'
     ]
   },
   {
     id: 'jwst-csa',
-    title: 'James Webb Space Telescope (JWST) & CSA',
-    subtitle: 'Mission-Critical Supply Chain Risk, Precision Engineering & Program Governance Case Study',
-    category: 'Systems, PLM & Supply Chain',
+    title: 'James Webb Space Telescope & Canadian Space Agency',
+    subtitle: 'Mission-Critical Collaboration, Precision Engineering & Rigorous Care',
+    category: 'Systems & Operations',
     date: '2026',
-    organization: 'Aerospace Systems & Supply Chain Case Study',
-    role: 'Program Risk Governance & Systems Architecture',
+    organization: 'Aerospace Engineering Study',
+    role: 'Program Governance Analyst',
     heroStats: [
-      { label: 'Pointing Precision', value: '1/1,000,000th Deg' },
-      { label: 'Operating Temp', value: '~40K (-240°C)' },
-      { label: 'CSA Instruments', value: 'FGS + NIRISS' },
-      { label: 'Orbit Reliability', value: 'Zero-Failure Mandate' }
+      { label: 'Precision', value: '1-Millionth Deg' },
+      { label: 'Environment', value: '~40K (-240°C)' },
+      { label: 'Contribution', value: 'FGS Stabilization' },
+      { label: 'Outcome', value: 'Flawless In-Orbit' }
     ],
     summary:
-      'An engineering program management investigation into the Canadian Space Agency\'s (CSA) contribution to the James Webb Space Telescope, manufactured by COM DEV (Honeywell). While NIRISS provided mission-enhancing exoplanet spectroscopy, the Fine Guidance Sensor (FGS) was mission-enabling—sitting directly inside the real-time attitude control loop required for every Webb observation. Analyzed how NASA and CSA managed single-source supply chain fragility, a mid-program cryogenic qualification failure (TFI to NIRISS redesign), and zero-serviceability constraints.',
+      'Examined the Canadian Space Agency’s contribution to the James Webb Space Telescope—specifically the Fine Guidance Sensor (FGS) which acts as the stabilization backbone for every observation. Explored how rigorous testing, cultural bridge-building, and meticulous care ensured mission success under zero-failure constraints.',
     problem: [
-      'Single-Source Dependency: Leveraged CSA/COM DEV\'s heritage from the FUSE mission to reduce technical uncertainty, but concentrated institutional knowledge in a single vendor with zero backup supplier.',
-      'Tightly Coupled Single-Point Failure: Because FGS feeds real-time pointing corrections into the spacecraft attitude control loop at sub-arcsecond precision, any FGS drift incapacitates the entire observatory.',
-      'Frontier Environmental & Mid-Program Crisis: Must operate at ~40 Kelvin (-240°C) using low-yield HgCdTe detectors with zero possibility of in-orbit repair. Midway through development, the Tunable Filter Imager (TFI) failed cryogenic qualification and had to be redesigned into NIRISS.'
+      'Operating at cryogenic temperatures (~40K) in deep space with zero possibility of repair missions left no room for error.',
+      'Single-source dependency required extraordinary collaboration and testing rigor.'
     ],
     solutionPillars: [
-      { name: '1. Structured Liaison Governance Model', desc: 'Dedicated NASA personnel embedded as technical and cultural translators with Canadian teams, accelerating cross-border issue resolution.' },
-      { name: '2. Exhaustive 40K Cryogenic Testing Regime', desc: 'Rigorous cryogenic qualification caught the TFI failure prior to flight, enabling the successful redesign into NIRISS before launch.' },
-      { name: '3. Zero-Defect Manufacturing Philosophy', desc: 'Applied Six-Sigma-adjacent quality governance from step one, treating every optical and HgCdTe detector assembly as irreplaceable.' },
-      { name: '4. Full-Spacecraft Integration Validation', desc: 'Validated FGS end-to-end inside the complete spacecraft control loop rather than relying solely on isolated component tests.' },
-      { name: '5. Formal Risk Escalation Pathways', desc: 'Rapid executive escalation protocols prevented localized engineering slippage from compounding into mission-level failure.' }
+      { name: 'Structured Liaison Model', desc: 'Building deep cultural and technical trust between international space agencies.' },
+      { name: 'Exhaustive Testing Rigor', desc: 'Catching and redesigning potential flaws early through unwavering commitment to excellence.' }
     ],
     gtmStrategy: {
-      headline: '5 Transferable Program Management Lessons for Frontier Engineering',
+      headline: 'Excellence Through Rigorous Care and Partnership',
       channels: [
-        { channel: 'Capability Optimization vs. Resilience', detail: 'Selecting a single capable supplier lowers near-term schedule risk but creates lifetime structural fragility.' },
-        { channel: 'Mission-Enabling vs. Mission-Enhancing Governance', detail: 'Subsystems inside real-time operational control loops (FGS) require categorically higher governance and testing budgets than additive instruments (NIRISS).' },
-        { channel: 'Testing as Risk Acceptance', detail: 'Extreme testing diligence successfully substituted for supply chain redundancy on JWST—but survival does not equal structural resilience.' }
+        { channel: 'International Governance', detail: 'Establishing clear communication bridges across organizational boundaries.' }
       ],
-      metrics: 'Launched December 25, 2021; achieved flawless in-orbit performance across all deep-space observations.'
+      metrics: 'Flawless in-orbit performance enabling humanity’s deepest space discoveries.'
     },
     financials: {
-      headers: ['Program Dimension', 'FGS (Fine Guidance Sensor)', 'NIRISS (Near-IR Imager & Spectrograph)', 'Governance Implication'],
+      headers: ['Dimension', 'Engineering Challenge', 'Mitigation Strategy', 'Result'],
       rows: [
-        ['Strategic Role', 'Mission-Enabling (Stabilization Backbone)', 'Mission-Enhancing (Exoplanet Science)', 'FGS sits in active real-time control loop'],
-        ['Technical Template', 'Sub-arcsecond (1-millionth degree)', 'High-contrast spectroscopy at ~40K', 'Micron-level optical alignment under cryo contraction'],
-        ['Mid-Program Pivot', 'Required system-level re-validation', 'Redesigned from failed TFI instrument', 'Cryo testing caught TFI flaw before launch'],
-        ['Supply Chain Profile', 'Single-source (COM DEV / Honeywell)', 'Low-yield HgCdTe semiconductor detectors', 'Mitigated via NASA-CSA Structured Liaison Model']
+        ['Environment', 'Cryogenic ~40K (-240°C)', 'Exhaustive 40K testing regime', 'Validated reliability'],
+        ['Single Source', 'No alternative suppliers', 'Zero-defect manufacturing', 'Flawless execution'],
+        ['Partnership', 'Cross-agency friction', 'Structured liaison model', 'Seamless collaboration']
       ],
-      note: 'Demonstrates how international aerospace programs balance technical heritage against single-point architectural coupling.'
+      note: 'Illustrates how meticulous dedication and partnership achieve extraordinary goals.'
     },
     takeaways: [
-      'Distinguished between mission-enabling infrastructure (FGS) and mission-enhancing features (NIRISS) to allocate risk governance proportionally.',
-      'Codified the "Structured Liaison Model" as a first-class program architecture pattern for cross-organizational engineering.'
+      'Complex challenges are overcome through rigorous preparation, humility, and teamwork.',
+      'Clear communication bridges build trust across diverse teams.'
     ]
   }
 ];
@@ -709,7 +650,7 @@ export const CERTIFICATIONS = [
     issued: 'February 2, 2026',
     validUntil: 'January 2, 2028',
     status: 'Active & Verified',
-    skills: ['Product Backlog Ownership', 'Agile Release Planning', 'Stakeholder Alignment', 'Sprint Velocity & Value Maximization']
+    skills: ['Product Backlog Ownership', 'Agile Release Planning', 'Stakeholder Alignment', 'Value Maximization']
   },
   {
     id: 'aha-pm',
@@ -719,26 +660,26 @@ export const CERTIFICATIONS = [
     issued: '2025',
     validUntil: 'No Expiration',
     status: 'Verified Credential',
-    skills: ['Strategic Roadmapping', 'OKR & Initiative Alignment', 'Idea Prioritization Scoring', 'Cross-Functional Release Governance']
+    skills: ['Strategic Roadmapping', 'OKR Alignment', 'Prioritization Scoring', 'Release Governance']
   },
   {
     id: 'hrci-em',
-    name: 'Tech Career Skills: Moving from Developer to Engineering Manager',
+    name: 'Tech Career Skills: Moving from Developer to Manager',
     provider: 'HR Certification Institute (HRCI®)',
     certId: '0932fa6f213f7dd2da936f6613430960c3d8cb3ad1a94d52a80853b33018b429',
     issued: 'December 11, 2025',
     validUntil: 'No Expiration',
     status: 'Verified Credential',
-    skills: ['Engineering Leadership', 'Technical-to-Manager Transition', 'Team Coaching & Feedback', 'Architecture & Delivery Tradeoffs']
+    skills: ['Leadership & Coaching', 'Technical Transition', 'Feedback Culture', 'Cross-Functional Execution']
   },
   {
     id: 'shrm-em',
-    name: 'Tech Career Skills: Moving from Developer to Engineering Manager',
+    name: 'Tech Career Skills: Moving from Developer to Manager',
     provider: 'Society for Human Resource Management (SHRM®)',
     certId: '75fa3eb7f992f41007feade198bb25c31fa8e2fb90836cdcc640fe7f3149a319',
     issued: 'December 11, 2025',
     validUntil: 'No Expiration',
-    status: 'VerifiedCert',
-    skills: ['People Operations in Tech', 'Organizational Design', 'Performance & KPI Management', 'Conflict Resolution']
+    status: 'Verified Credential',
+    skills: ['People Operations', 'Organizational Culture', 'Performance Management', 'Conflict Resolution']
   }
 ];
