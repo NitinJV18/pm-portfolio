@@ -124,6 +124,13 @@ export const EXPERIENCE = [
 
 export const LEADERSHIP = [
   {
+    role: 'Student Leader & Worship Team Member',
+    org: 'Ignite Campus Ministry & CityMovement Church (Raleigh)',
+    period: '2025 – Present',
+    detail:
+      'Serve as a student leader at Ignite Campus Ministry and young adult leader / worship team member at CityMovement Church Raleigh, fostering inclusive community-building, mentorship, and team collaboration.'
+  },
+  {
     role: 'Zealous Community & Events Host',
     org: 'International Community & Mentorship Forum',
     period: 'Oct 2023 – Jul 2025',
@@ -680,7 +687,7 @@ export const CASE_STUDIES = [
       headers: ['Program Dimension', 'FGS (Fine Guidance Sensor)', 'NIRISS (Near-IR Imager & Spectrograph)', 'Governance Implication'],
       rows: [
         ['Strategic Role', 'Mission-Enabling (Stabilization Backbone)', 'Mission-Enhancing (Exoplanet Science)', 'FGS sits in active real-time control loop'],
-        ['Technical Tolerance', 'Sub-arcsecond (1-millionth degree)', 'High-contrast spectroscopy at ~40K', 'Micron-level optical alignment under cryo contraction'],
+        ['Technical Template', 'Sub-arcsecond (1-millionth degree)', 'High-contrast spectroscopy at ~40K', 'Micron-level optical alignment under cryo contraction'],
         ['Mid-Program Pivot', 'Required system-level re-validation', 'Redesigned from failed TFI instrument', 'Cryo testing caught TFI flaw before launch'],
         ['Supply Chain Profile', 'Single-source (COM DEV / Honeywell)', 'Low-yield HgCdTe semiconductor detectors', 'Mitigated via NASA-CSA Structured Liaison Model']
       ],
@@ -731,7 +738,7 @@ export const CERTIFICATIONS = [
     certId: '75fa3eb7f992f41007feade198bb25c31fa8e2fb90836cdcc640fe7f3149a319',
     issued: 'December 11, 2025',
     validUntil: 'No Expiration',
-    status: 'Verified Credential',
+    status: 'VerifiedCert',
     skills: ['People Operations in Tech', 'Organizational Design', 'Performance & KPI Management', 'Conflict Resolution']
   }
 ];

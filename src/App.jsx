@@ -453,7 +453,7 @@ export default function App() {
                           {edu.degree}
                         </p>
                       </div>
-                      <span className="badge font-mono">CGPA: {edu.gpa}</span>
+                      <span className="badge font-mono">GPA: {edu.gpa}</span>
                     </div>
                     <div className="text-muted font-mono" style={{ fontSize: '0.78rem' }}>
                       {edu.period} • {edu.location}
